@@ -1,67 +1,986 @@
-<!DOCTYPE HTML>
+html = """<!DOCTYPE HTML>
 <html lang="en">
+
 <head>
-  <title>Intelligent Agents | Vinod Jadhav</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <meta name="description" content="Vinod Jadhav's Intelligent Agents module e-Portfolio for the MSc Artificial Intelligence programme." />
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-  <style>
-    .portfolio-note{border-left:4px solid currentColor;padding:1rem 1.25rem;margin:1.5rem 0;background:rgba(255,255,255,.04)}
-    .evidence-grid,.screenshot-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin:1.25rem 0 2rem}
-    .evidence-card{border:1px solid rgba(255,255,255,.2);padding:1rem;border-radius:.35rem}
-    .status-placeholder{font-style:italic;opacity:.82}.quick-nav{columns:2;column-gap:2rem}.quick-nav li{break-inside:avoid;margin-bottom:.45rem}
-    .screenshot-gallery figure{margin:0}.screenshot-gallery img{width:100%;height:auto;border-radius:.3rem;border:1px solid rgba(255,255,255,.2)}
-    .screenshot-gallery figcaption{margin-top:.5rem;font-size:.9rem}@media screen and (max-width:736px){.quick-nav{columns:1}}
-  </style>
+    <title>Intelligent Agents | Vinod Jadhav</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description"
+        content="Vinod Jadhav's Intelligent Agents module e-Portfolio for the MSc Artificial Intelligence programme." />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <style>
+        .portfolio-note {
+            border-left: 4px solid currentColor;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .quick-nav {
+            columns: 2;
+            column-gap: 2rem;
+        }
+
+        .quick-nav li {
+            break-inside: avoid;
+            margin-bottom: 0.45rem;
+        }
+
+        .evidence-grid,
+        .screenshot-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1rem;
+            margin: 1.25rem 0 2rem;
+        }
+
+        .evidence-card {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 1rem;
+            border-radius: 0.35rem;
+        }
+
+        .evidence-card h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .screenshot-gallery figure {
+            margin: 0;
+        }
+
+        .screenshot-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.3rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .screenshot-gallery figcaption {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .status-placeholder {
+            font-style: italic;
+            opacity: 0.82;
+        }
+
+        .section-label {
+            display: inline-block;
+            margin-bottom: 1rem;
+            padding: 0.25rem 0.65rem;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 999px;
+            font-size: 0.85rem;
+        }
+
+        .compact-list li {
+            margin-bottom: 0.35rem;
+        }
+
+        @media screen and (max-width: 736px) {
+            .quick-nav {
+                columns: 1;
+            }
+        }
+    </style>
 </head>
+
 <body class="is-preload">
-<div id="wrapper">
-<header id="header"><a href="index.html" class="logo"><strong>Vinod Jadhav</strong><span>MSc AI e-Portfolio</span></a><nav><a href="#menu">Menu</a></nav></header>
-<nav id="menu"><ul class="links">
-<li><a href="index.html">Home</a></li><li><a href="about.html">About Me</a></li><li><a href="launch-into-computing.html">Launch Into Computing</a></li>
-<li><a href="understanding-ai.html">Understanding Artificial Intelligence</a></li><li><a href="numerical-analysis.html">Numerical Analysis</a></li>
-<li><a href="intelligent-agents.html">Intelligent Agents</a></li><li><a href="machine-learning.html">Machine Learning</a></li>
-<li><a href="krr.html">Knowledge Representation &amp; Reasoning</a></li><li><a href="research-methods.html">Research Methods and Professional Practice</a></li>
-<li><a href="computing-project.html">Computing Project</a></li><li><a href="skills-matrix.html">Skills Matrix</a></li><li><a href="reflections.html">Reflections</a></li>
-</ul></nav>
-<div id="main" class="alt"><section id="top"><div class="inner">
-<header class="major"><h1>Intelligent Agents</h1></header>
-<p>This page presents my learning journey and evidence from the Intelligent Agents module. It brings together collaborative discussions, practical activities, team design work, my individual Inquiro implementation, feedback, professional development and reflection.</p>
-<p><strong>Live e-Portfolio:</strong> <a href="https://vinodjadhav-ai.github.io/" target="_blank" rel="noopener">https://vinodjadhav-ai.github.io/</a></p>
-<div class="portfolio-note"><strong>Assessment structure:</strong> the main portfolio commentary is limited to 1,500 words and the final reflective piece is limited to 1,000 words. Full evidence is linked rather than copied in full.</div>
-<h2>Contents</h2><ol class="quick-nav">
-<li><a href="#overview">Module Overview</a></li><li><a href="#outcomes">Learning Outcomes</a></li><li><a href="#journey">Learning Journey</a></li>
-<li><a href="#discussion-1">Collaborative Discussion 1</a></li><li><a href="#discussion-2">Collaborative Discussion 2</a></li><li><a href="#unit-6">Unit 6: KQML and KIF Dialogue</a></li>
-<li><a href="#team-project">Team C Design Proposal</a></li><li><a href="#unit-8">Unit 8: Parse Tree</a></li><li><a href="#discussion-3">Collaborative Discussion 3</a></li>
-<li><a href="#unit-10">Unit 10: Deep Learning in Action</a></li><li><a href="#inquiro">Individual Project: Inquiro</a></li><li><a href="#case-studies">Reflective Case Studies</a></li>
-<li><a href="#professional-development">Professional Development</a></li><li><a href="#final-reflection">Final Reflection</a></li><li><a href="#mapping">Learning Outcome Mapping</a></li><li><a href="#references">References</a></li>
-</ol><hr />
-<section id="overview"><header class="major"><h2>1. Module Overview</h2></header><p class="status-placeholder">This section will provide a concise overview of agent-based systems, agent architectures, communication between agents and the practical design and implementation of an intelligent-agent system.</p><p><a href="#top">Back to contents</a></p></section><hr />
-<section id="outcomes"><header class="major"><h2>2. Module Learning Outcomes</h2></header><ol><li>Identify and critically analyse agent-based systems, differentiating between architectures and approaches.</li><li>Apply and critically evaluate intelligent-agent techniques to real-world problems involving uncertainty and technical risk.</li><li>Use appropriate software tools to design and implement an agent-based system while considering legal, social, ethical and professional issues.</li><li>Develop the skills required to contribute effectively within a virtual development team.</li></ol><p class="status-placeholder">A short explanation of how these outcomes were addressed through discussions, unit activities, the Team C proposal and the Inquiro project will be added here.</p><p><a href="#top">Back to contents</a></p></section><hr />
-<section id="journey"><header class="major"><h2>3. My Learning Journey</h2></header><p class="status-placeholder">This section will summarise how my understanding developed from viewing agents mainly as automation tools to designing, implementing, testing and critically evaluating a multi-agent workflow.</p><p><a href="#top">Back to contents</a></p></section><hr />
-<section id="discussion-1"><header class="major"><h2>4. Units 1–3: Collaborative Discussion 1</h2></header><h3>Topic: Agent-Based Systems</h3>
-<p>At the beginning of the module, I mainly understood intelligent agents as systems that could automate tasks, process data and support faster decision-making. In my initial post, I connected these ideas with examples from networking, cybersecurity and customer service.</p>
-<p>The peer discussion helped me look beyond the benefits. Feedback introduced ideas such as bounded autonomy, emergent behaviour, governance and human oversight. While responding to other students, I also considered the BDI model, the role of Large Language Models and the need for validation when agents operate in complex environments.</p>
-<p>This activity changed my view of agents from simple automation tools to systems that can act, adapt and cooperate, but may also behave unpredictably. It was one of the first activities where I began moving from describing ideas towards evaluating their risks and limitations.</p>
-<p><strong>Learning outcomes addressed:</strong> LO1 and LO4.</p>
-<h3>Evidence</h3><div class="evidence-grid">
-<div class="evidence-card"><h4>Initial Post</h4><p>My submitted discussion on the growth, benefits and ethical considerations of agent-based systems.</p><a href="evidence/intelligent-agents/discussions/discussion-1/initial-post.md">View Markdown evidence</a></div>
-<div class="evidence-card"><h4>Feedback Received</h4><p>Peer feedback introducing bounded autonomy, governance, oversight and unpredictability.</p><a href="evidence/intelligent-agents/discussions/discussion-1/peer-feedback-received.md">View feedback evidence</a></div>
-<div class="evidence-card"><h4>My Peer Responses</h4><p>My responses discussing emergent behaviour, BDI, LLM reliability and human oversight.</p><a href="evidence/intelligent-agents/discussions/discussion-1/my-peer-responses.md">View my responses</a></div>
-<div class="evidence-card"><h4>Summary Post</h4><p>My final summary showing how my understanding developed across Units 1–3.</p><a href="evidence/intelligent-agents/discussions/discussion-1/summary-post.md">View summary post</a></div></div>
-<h3>Discussion Screenshots</h3><div class="screenshot-gallery"><figure><a href="evidence/intelligent-agents/discussions/discussion-1/screenshots/initial-post.png" target="_blank"><img src="evidence/intelligent-agents/discussions/discussion-1/screenshots/initial-post.png" alt="Discussion 1 initial post" /></a><figcaption>Initial post</figcaption></figure><figure><a href="evidence/intelligent-agents/discussions/discussion-1/screenshots/peer-response-1.png" target="_blank"><img src="evidence/intelligent-agents/discussions/discussion-1/screenshots/peer-response-1.png" alt="First peer response written by Vinod" /></a><figcaption>Peer response 1</figcaption></figure><figure><a href="evidence/intelligent-agents/discussions/discussion-1/screenshots/peer-response-2.png" target="_blank"><img src="evidence/intelligent-agents/discussions/discussion-1/screenshots/peer-response-2.png" alt="Second peer response written by Vinod" /></a><figcaption>Peer response 2</figcaption></figure><figure><a href="evidence/intelligent-agents/discussions/discussion-1/screenshots/summary-post.png" target="_blank"><img src="evidence/intelligent-agents/discussions/discussion-1/screenshots/summary-post.png" alt="Discussion 1 summary post" /></a><figcaption>Summary post</figcaption></figure><figure><a href="evidence/intelligent-agents/discussions/discussion-1/screenshots/peer-feedback.png" target="_blank"><img src="evidence/intelligent-agents/discussions/discussion-1/screenshots/peer-feedback.png" alt="Peer feedback received for Discussion 1" /></a><figcaption>Peer feedback received</figcaption></figure></div><p><a href="#top">Back to contents</a></p></section><hr />
-<section id="discussion-2"><header class="major"><h2>5. Units 4–7: Collaborative Discussion 2</h2></header><h3>Topic: Agent Communication Languages</h3><p class="status-placeholder">Final commentary and evidence will be added after reviewing the submitted initial post, peer responses and summary post.</p><p><strong>Learning outcomes addressed:</strong> LO1, LO2 and LO4.</p><p><a href="#top">Back to contents</a></p></section><hr />
-<section id="unit-6"><header class="major"><h2>6. Unit 6: KQML and KIF Agent Dialogue</h2></header><h3>Completed Activity</h3><p class="status-placeholder">The completed dialogue between Alice and Bob, together with a short explanation and reflection, will be added here.</p><p><strong>Learning outcomes addressed:</strong> LO1 and LO2.</p><p><a href="#top">Back to contents</a></p></section><hr />
-<section id="team-project"><header class="major"><h2>7. Team C Design Proposal</h2></header><h3>Project Overview, My Contribution and Critical Evaluation</h3><p class="status-placeholder">The proposed architecture, team decisions, my individual contribution and comparison with the later implementation will be added here.</p><p><strong>Learning outcomes addressed:</strong> LO1, LO2, LO3 and LO4.</p><p><a href="#top">Back to contents</a></p></section><hr />
-<section id="unit-8"><header class="major"><h2>8. Unit 8: Parse Tree Activity</h2></header><h3>Completed Activity</h3><p class="status-placeholder">The completed parse tree, explanation and short reflection on language structure and NLP will be added here.</p><p><strong>Learning outcomes addressed:</strong> LO1 and LO2.</p><p><a href="#top">Back to contents</a></p></section><hr />
-<section id="discussion-3"><header class="major"><h2>9. Units 8–10: Collaborative Discussion 3</h2></header><h3>Topic: Ethical Issues in Deep Learning</h3><p class="status-placeholder">Final commentary and evidence will be added after reviewing the submitted discussion material.</p><p><strong>Learning outcomes addressed:</strong> LO2, LO3 and LO4.</p><p><a href="#top">Back to contents</a></p></section><hr />
-<section id="unit-10"><header class="major"><h2>10. Unit 10: Deep Learning in Action</h2></header><h3>Completed Activity</h3><p class="status-placeholder">The selected deep-learning application, its operation, social impact, privacy concerns and ethical issues will be summarised here.</p><p><strong>Learning outcomes addressed:</strong> LO2 and LO3.</p><p><a href="#top">Back to contents</a></p></section><hr />
-<section id="inquiro"><header class="major"><h2>11. Units 11–12: Individual Project – Inquiro</h2></header><h3>Project Overview</h3><p class="status-placeholder">A concise explanation of the Inquiro academic research assistant will be added here.</p><h3>Architecture and Agent Roles</h3><ul><li>Planner</li><li>Retriever</li><li>Processor</li><li>Writer</li></ul><h3>Design Compared with Implementation</h3><p class="status-placeholder">This section will critically compare the Team C design with the final local implementation.</p><h3>Testing and Validation</h3><p class="status-placeholder">Unit tests, workflow tests, logs, intermediate outputs and remediation evidence will be summarised here.</p><h3>Strengths, Limitations and Future Improvements</h3><p class="status-placeholder">This section will evaluate what worked, what remained limited and what I would improve in a future version.</p><p><strong>Learning outcomes addressed:</strong> LO1, LO2 and LO3.</p><p><a href="#top">Back to contents</a></p></section><hr />
-<section id="case-studies"><header class="major"><h2>12. Three Reflective Case Studies</h2></header><h3>Case Study 1: AI Safety Constraints</h3><p class="status-placeholder">Bounded autonomy, testing, safe failure and human oversight.</p><h3>Case Study 2: Explainable Decisions in Agents</h3><p class="status-placeholder">Agent stages, logs, intermediate outputs and traceability.</p><h3>Case Study 3: Responsible Deployment</h3><p class="status-placeholder">Reliability, source quality, model limitations and human review.</p><p><a href="#top">Back to contents</a></p></section><hr />
-<section id="professional-development"><header class="major"><h2>13. Team Meetings, Feedback and Professional Development</h2></header><h3>Team Meeting Notes</h3><div class="table-wrapper"><table><thead><tr><th>Date</th><th>Participants</th><th>Discussion or Decision</th><th>My Action or Contribution</th></tr></thead><tbody><tr><td>To be added</td><td>To be added</td><td>To be added</td><td>To be added</td></tr></tbody></table></div><h3>Feedback and Action Taken</h3><div class="table-wrapper"><table><thead><tr><th>Source</th><th>Feedback</th><th>Action Taken</th></tr></thead><tbody><tr><td>To be added</td><td>To be added</td><td>To be added</td></tr></tbody></table></div><h3>Professional Skills Matrix and PDP</h3><div class="table-wrapper"><table><thead><tr><th>Skill</th><th>Evidence</th><th>Current Position</th><th>Future Action</th></tr></thead><tbody><tr><td>Critical thinking</td><td>To be added</td><td>Developing</td><td>To be added</td></tr><tr><td>Teamwork</td><td>To be added</td><td>Developing</td><td>To be added</td></tr><tr><td>Problem-solving</td><td>To be added</td><td>Developing</td><td>To be added</td></tr><tr><td>IT and digital skills</td><td>To be added</td><td>Developing</td><td>To be added</td></tr><tr><td>Ethical awareness</td><td>To be added</td><td>Developing</td><td>To be added</td></tr><tr><td>Critical reflection</td><td>To be added</td><td>Developing</td><td>To be added</td></tr></tbody></table></div><p><a href="#top">Back to contents</a></p></section><hr />
-<section id="final-reflection"><header class="major"><h2>14. Final Reflective Piece</h2></header><p><strong>Maximum word count:</strong> 1,000 words.</p><h3>What?</h3><p class="status-placeholder">Project outcome, team design, individual implementation and key incidents.</p><h3>So What?</h3><p class="status-placeholder">Critical analysis, emotional response, changes in understanding, teamwork and ethical development.</p><h3>Now What?</h3><p class="status-placeholder">Future technical learning, better testing, responsible AI practice and application to network automation.</p><p><strong>Reflective framework:</strong> Rolfe, Freshwater and Jasper (2001).</p><p><a href="#top">Back to contents</a></p></section><hr />
-<section id="mapping"><header class="major"><h2>15. Learning Outcome Mapping</h2></header><div class="table-wrapper"><table><thead><tr><th>Evidence</th><th>LO1</th><th>LO2</th><th>LO3</th><th>LO4</th></tr></thead><tbody><tr><td>Discussion 1</td><td>✓</td><td></td><td></td><td>✓</td></tr><tr><td>Discussion 2</td><td>✓</td><td>✓</td><td></td><td>✓</td></tr><tr><td>Unit 6 Dialogue</td><td>✓</td><td>✓</td><td></td><td></td></tr><tr><td>Team C Proposal</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr><tr><td>Unit 8 Parse Tree</td><td>✓</td><td>✓</td><td></td><td></td></tr><tr><td>Discussion 3</td><td></td><td>✓</td><td>✓</td><td>✓</td></tr><tr><td>Unit 10 Activity</td><td></td><td>✓</td><td>✓</td><td></td></tr><tr><td>Inquiro Project</td><td>✓</td><td>✓</td><td>✓</td><td></td></tr><tr><td>Final Reflection</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr></tbody></table></div><p><a href="#top">Back to contents</a></p></section><hr />
-<section id="references"><header class="major"><h2>16. References</h2></header><p class="status-placeholder">The final Harvard reference list will be added after all portfolio sections are complete.</p><p>Rolfe, G., Freshwater, D. and Jasper, M. (2001) <em>Critical reflection in nursing and the helping professions: a user's guide.</em> Basingstoke: Palgrave Macmillan.</p><p><a href="#top">Back to contents</a></p></section><hr /></div></section></div><footer id="footer"><div class="inner"><ul class="copyright"><li>&copy; Vinod Jadhav</li><li>Design: HTML5 UP</li></ul></div></footer></div>
-<script src="assets/js/jquery.min.js"></script><script src="assets/js/jquery.scrolly.min.js"></script><script src="assets/js/jquery.scrollex.min.js"></script><script src="assets/js/browser.min.js"></script><script src="assets/js/breakpoints.min.js"></script><script src="assets/js/util.js"></script><script src="assets/js/main.js"></script></body></html>
+
+    <div id="wrapper">
+
+        <header id="header">
+            <a href="index.html" class="logo">
+                <strong>Vinod Jadhav</strong>
+                <span>MSc AI e-Portfolio</span>
+            </a>
+            <nav>
+                <a href="#menu">Menu</a>
+            </nav>
+        </header>
+
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="launch-into-computing.html">Launch Into Computing</a></li>
+                <li><a href="understanding-ai.html">Understanding Artificial Intelligence</a></li>
+                <li><a href="numerical-analysis.html">Numerical Analysis</a></li>
+                <li><a href="intelligent-agents.html">Intelligent Agents</a></li>
+                <li><a href="machine-learning.html">Machine Learning</a></li>
+                <li><a href="krr.html">Knowledge Representation &amp; Reasoning</a></li>
+                <li><a href="research-methods.html">Research Methods and Professional Practice</a></li>
+                <li><a href="computing-project.html">Computing Project</a></li>
+                <li><a href="skills-matrix.html">Skills Matrix</a></li>
+                <li><a href="reflections.html">Reflections</a></li>
+            </ul>
+        </nav>
+
+        <div id="main" class="alt">
+            <section id="top">
+                <div class="inner">
+
+                    <header class="major">
+                        <h1>Intelligent Agents</h1>
+                    </header>
+
+                    <p>
+                        This page presents my learning journey and evidence from the Intelligent Agents module.
+                        It brings together collaborative discussions, practical activities, team design work,
+                        my individual Inquiro implementation, feedback, professional development and reflection.
+                    </p>
+
+                    <p>
+                        <strong>Live e-Portfolio:</strong>
+                        <a href="https://vinodjadhav-ai.github.io/" target="_blank" rel="noopener">
+                            https://vinodjadhav-ai.github.io/
+                        </a>
+                    </p>
+
+                    <div class="portfolio-note">
+                        <strong>Assessment structure:</strong>
+                        the main portfolio commentary is limited to 1,500 words and the final reflective piece
+                        is limited to 1,000 words. Full evidence is linked instead of being copied in full.
+                    </div>
+
+                    <h2>Contents</h2>
+
+                    <ol class="quick-nav">
+                        <li><a href="#overview">Module Overview</a></li>
+                        <li><a href="#outcomes">Learning Outcomes</a></li>
+                        <li><a href="#journey">Learning Journey</a></li>
+                        <li><a href="#discussion-1">Collaborative Discussion 1</a></li>
+                        <li><a href="#discussion-2">Collaborative Discussion 2</a></li>
+                        <li><a href="#unit-6">Unit 6: KQML and KIF Dialogue</a></li>
+                        <li><a href="#team-project">Team C Design Proposal</a></li>
+                        <li><a href="#unit-8">Unit 8: Parse Tree</a></li>
+                        <li><a href="#discussion-3">Collaborative Discussion 3</a></li>
+                        <li><a href="#unit-10">Unit 10: Deep Learning in Action</a></li>
+                        <li><a href="#inquiro">Individual Project: Inquiro</a></li>
+                        <li><a href="#case-studies">Reflective Case Studies</a></li>
+                        <li><a href="#professional-development">Professional Development</a></li>
+                        <li><a href="#final-reflection">Final Reflection</a></li>
+                        <li><a href="#mapping">Learning Outcome Mapping</a></li>
+                        <li><a href="#references">References</a></li>
+                    </ol>
+
+                    <hr />
+
+                    <section id="overview">
+                        <header class="major">
+                            <h2>1. Module Overview</h2>
+                        </header>
+
+                        <p class="status-placeholder">
+                            This section will provide a concise overview of intelligent agents, agent architectures,
+                            communication between agents, and the practical design and implementation of an
+                            agent-based system.
+                        </p>
+
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+
+                    <hr />
+
+                    <section id="outcomes">
+                        <header class="major">
+                            <h2>2. Module Learning Outcomes</h2>
+                        </header>
+
+                        <ol>
+                            <li>
+                                Identify and critically analyse agent-based systems,
+                                differentiating between architectures and approaches.
+                            </li>
+                            <li>
+                                Apply and critically evaluate intelligent-agent techniques
+                                to real-world problems involving uncertainty and technical risk.
+                            </li>
+                            <li>
+                                Use appropriate software tools to design and implement an agent-based system
+                                while considering legal, social, ethical and professional issues.
+                            </li>
+                            <li>
+                                Develop the skills required to contribute effectively within a virtual development team.
+                            </li>
+                        </ol>
+
+                        <p class="status-placeholder">
+                            A short explanation of how these outcomes were addressed through discussions,
+                            unit activities, the Team C proposal and the Inquiro project will be added here.
+                        </p>
+
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+
+                    <hr />
+
+                    <section id="journey">
+                        <header class="major">
+                            <h2>3. My Learning Journey</h2>
+                        </header>
+
+                        <p class="status-placeholder">
+                            This section will summarise how my understanding developed from viewing agents mainly as
+                            automation tools to designing, implementing, testing and critically evaluating
+                            a multi-agent workflow.
+                        </p>
+
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+
+                    <hr />
+
+                    <section id="discussion-1">
+                        <header class="major">
+                            <h2>4. Units 1–3: Collaborative Discussion 1</h2>
+                        </header>
+
+                        <span class="section-label">Agent-Based Systems</span>
+
+                        <p>
+                            At the beginning of the module, I mainly understood intelligent agents as systems that could
+                            automate tasks, process data and support faster decision-making. In my initial post, I
+                            connected these ideas with examples from networking, cybersecurity and customer service.
+                        </p>
+
+                        <p>
+                            The peer discussion helped me look beyond the benefits. Feedback introduced ideas such as
+                            bounded autonomy, emergent behaviour, governance and human oversight. While responding to
+                            other students, I also considered the BDI model, the role of Large Language Models and the
+                            need for validation when agents operate in complex environments.
+                        </p>
+
+                        <p>
+                            This activity changed my view of agents from simple automation tools to systems that can
+                            act, adapt and cooperate, but may also behave unpredictably. It was one of the first
+                            activities where I began moving from describing ideas towards evaluating risks and
+                            limitations.
+                        </p>
+
+                        <p><strong>Learning outcomes addressed:</strong> LO1 and LO4.</p>
+
+                        <h3>Evidence</h3>
+
+                        <div class="evidence-grid">
+                            <div class="evidence-card">
+                                <h4>Initial Post</h4>
+                                <p>My submitted discussion on the growth, benefits and ethical considerations of agent-based systems.</p>
+                                <a href="evidence/intelligent-agents/discussions/discussion-1/initial-post.md">View initial post</a>
+                            </div>
+
+                            <div class="evidence-card">
+                                <h4>Feedback Received</h4>
+                                <p>Peer feedback introducing bounded autonomy, governance, oversight and unpredictability.</p>
+                                <a href="evidence/intelligent-agents/discussions/discussion-1/peer-feedback-received.md">View feedback received</a>
+                            </div>
+
+                            <div class="evidence-card">
+                                <h4>My Peer Responses</h4>
+                                <p>My responses discussing emergent behaviour, BDI, LLM reliability and human oversight.</p>
+                                <a href="evidence/intelligent-agents/discussions/discussion-1/my-peer-responses.md">View my peer responses</a>
+                            </div>
+
+                            <div class="evidence-card">
+                                <h4>Summary Post</h4>
+                                <p>My final summary showing how my understanding developed across Units 1–3.</p>
+                                <a href="evidence/intelligent-agents/discussions/discussion-1/summary-post.md">View summary post</a>
+                            </div>
+                        </div>
+
+                        <h3>Discussion Screenshots</h3>
+
+                        <div class="screenshot-gallery">
+                            <figure>
+                                <a href="evidence/intelligent-agents/discussions/discussion-1/screenshots/initial-post.png" target="_blank">
+                                    <img src="evidence/intelligent-agents/discussions/discussion-1/screenshots/initial-post.png"
+                                        alt="Screenshot of Discussion 1 initial post" />
+                                </a>
+                                <figcaption>Initial post</figcaption>
+                            </figure>
+
+                            <figure>
+                                <a href="evidence/intelligent-agents/discussions/discussion-1/screenshots/peer-response-1.png" target="_blank">
+                                    <img src="evidence/intelligent-agents/discussions/discussion-1/screenshots/peer-response-1.png"
+                                        alt="Screenshot of first peer response written by Vinod" />
+                                </a>
+                                <figcaption>Peer response 1</figcaption>
+                            </figure>
+
+                            <figure>
+                                <a href="evidence/intelligent-agents/discussions/discussion-1/screenshots/peer-response-2.png" target="_blank">
+                                    <img src="evidence/intelligent-agents/discussions/discussion-1/screenshots/peer-response-2.png"
+                                        alt="Screenshot of second peer response written by Vinod" />
+                                </a>
+                                <figcaption>Peer response 2</figcaption>
+                            </figure>
+
+                            <figure>
+                                <a href="evidence/intelligent-agents/discussions/discussion-1/screenshots/summary-post.png" target="_blank">
+                                    <img src="evidence/intelligent-agents/discussions/discussion-1/screenshots/summary-post.png"
+                                        alt="Screenshot of Discussion 1 summary post" />
+                                </a>
+                                <figcaption>Summary post</figcaption>
+                            </figure>
+
+                            <figure>
+                                <a href="evidence/intelligent-agents/discussions/discussion-1/screenshots/peer-feedback.png" target="_blank">
+                                    <img src="evidence/intelligent-agents/discussions/discussion-1/screenshots/peer-feedback.png"
+                                        alt="Screenshot of peer feedback received for Discussion 1" />
+                                </a>
+                                <figcaption>Peer feedback received</figcaption>
+                            </figure>
+                        </div>
+
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+
+                    <hr />
+
+                    <section id="discussion-2">
+                        <header class="major">
+                            <h2>5. Units 4–7: Collaborative Discussion 2</h2>
+                        </header>
+
+                        <span class="section-label">Agent Communication Languages</span>
+
+                        <p>
+                            In this discussion, I compared Agent Communication Languages such as KQML with direct
+                            method invocation in Python and Java. I initially understood software communication mainly
+                            as function calls or API requests. Studying KQML helped me understand that autonomous agents
+                            also need to communicate intentions, such as asking, informing, negotiating and refusing.
+                        </p>
+
+                        <p>
+                            Feedback from my classmates expanded my understanding of shared ontologies and semantic
+                            interoperability. Even when agents use the same protocol, misunderstandings can still occur
+                            if they interpret concepts differently. The discussion also introduced approaches such as
+                            ontology alignment and more formal standards including FIPA-ACL.
+                        </p>
+
+                        <p>
+                            While responding to peers, I considered speech act theory, security risks and prompt
+                            injection. This helped me recognise that richer communication provides greater flexibility,
+                            but also creates more complexity and risk. My final conclusion was that method invocation
+                            suits predictable and tightly coupled applications, whereas ACLs are more suitable when
+                            independent agents need to cooperate or negotiate.
+                        </p>
+
+                        <p><strong>Learning outcomes addressed:</strong> LO1, LO2 and LO4.</p>
+
+                        <h3>Evidence</h3>
+
+                        <div class="evidence-grid">
+                            <div class="evidence-card">
+                                <h4>Initial Post</h4>
+                                <p>My comparison of KQML with method invocation, including performatives, interoperability and ontologies.</p>
+                                <a href="evidence/intelligent-agents/discussions/discussion-2/initial-post.md">View initial post</a>
+                            </div>
+
+                            <div class="evidence-card">
+                                <h4>Feedback Received</h4>
+                                <p>Peer feedback on ontology alignment, FIPA-ACL, semantic dependency and scaling communication.</p>
+                                <a href="evidence/intelligent-agents/discussions/discussion-2/peer-feedback-received.md">View feedback received</a>
+                            </div>
+
+                            <div class="evidence-card">
+                                <h4>My Peer Responses</h4>
+                                <p>My responses on speech acts, negotiation, security, prompt injection and modern agent frameworks.</p>
+                                <a href="evidence/intelligent-agents/discussions/discussion-2/my-peer-responses.md">View my peer responses</a>
+                            </div>
+
+                            <div class="evidence-card">
+                                <h4>Summary Post</h4>
+                                <p>My final reflection on ACLs, method invocation, shared ontologies and the continuing relevance of KQML.</p>
+                                <a href="evidence/intelligent-agents/discussions/discussion-2/summary-post.md">View summary post</a>
+                            </div>
+                        </div>
+
+                        <h3>Discussion Screenshots</h3>
+
+                        <div class="screenshot-gallery">
+                            <figure>
+                                <a href="evidence/intelligent-agents/discussions/discussion-2/screenshots/initial-post.png" target="_blank">
+                                    <img src="evidence/intelligent-agents/discussions/discussion-2/screenshots/initial-post.png"
+                                        alt="Screenshot of Discussion 2 initial post" />
+                                </a>
+                                <figcaption>Initial post</figcaption>
+                            </figure>
+
+                            <figure>
+                                <a href="evidence/intelligent-agents/discussions/discussion-2/screenshots/peer-response-1.png" target="_blank">
+                                    <img src="evidence/intelligent-agents/discussions/discussion-2/screenshots/peer-response-1.png"
+                                        alt="Screenshot of first peer response written by Vinod for Discussion 2" />
+                                </a>
+                                <figcaption>Peer response 1</figcaption>
+                            </figure>
+
+                            <figure>
+                                <a href="evidence/intelligent-agents/discussions/discussion-2/screenshots/peer-response-2.png" target="_blank">
+                                    <img src="evidence/intelligent-agents/discussions/discussion-2/screenshots/peer-response-2.png"
+                                        alt="Screenshot of second peer response written by Vinod for Discussion 2" />
+                                </a>
+                                <figcaption>Peer response 2</figcaption>
+                            </figure>
+
+                            <figure>
+                                <a href="evidence/intelligent-agents/discussions/discussion-2/screenshots/summary-post.png" target="_blank">
+                                    <img src="evidence/intelligent-agents/discussions/discussion-2/screenshots/summary-post.png"
+                                        alt="Screenshot of Discussion 2 summary post" />
+                                </a>
+                                <figcaption>Summary post</figcaption>
+                            </figure>
+
+                            <figure>
+                                <a href="evidence/intelligent-agents/discussions/discussion-2/screenshots/peer-feedback-1.png" target="_blank">
+                                    <img src="evidence/intelligent-agents/discussions/discussion-2/screenshots/peer-feedback-1.png"
+                                        alt="Screenshot of first peer feedback received for Discussion 2" />
+                                </a>
+                                <figcaption>Peer feedback 1</figcaption>
+                            </figure>
+
+                            <figure>
+                                <a href="evidence/intelligent-agents/discussions/discussion-2/screenshots/peer-feedback-2.png" target="_blank">
+                                    <img src="evidence/intelligent-agents/discussions/discussion-2/screenshots/peer-feedback-2.png"
+                                        alt="Screenshot of second peer feedback received for Discussion 2" />
+                                </a>
+                                <figcaption>Peer feedback 2</figcaption>
+                            </figure>
+                        </div>
+
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+
+                    <hr />
+
+                    <section id="unit-6">
+                        <header class="major">
+                            <h2>6. Unit 6: KQML and KIF Agent Dialogue</h2>
+                        </header>
+
+                        <h3>Completed Activity</h3>
+
+                        <p class="status-placeholder">
+                            The completed dialogue between Alice and Bob, together with a short explanation and
+                            reflection, will be added here.
+                        </p>
+
+                        <p><strong>Learning outcomes addressed:</strong> LO1 and LO2.</p>
+
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+
+                    <hr />
+
+                    <section id="team-project">
+                        <header class="major">
+                            <h2>7. Team C Design Proposal</h2>
+                        </header>
+
+                        <h3>Project Objective</h3>
+                        <p class="status-placeholder">
+                            The purpose of the proposed academic research assistant will be explained here.
+                        </p>
+
+                        <h3>Proposed Agent Architecture</h3>
+                        <p class="status-placeholder">
+                            The Planner, Retriever, Processor and Writer roles, together with the proposed technologies,
+                            will be summarised here.
+                        </p>
+
+                        <h3>My Individual Contribution</h3>
+                        <p class="status-placeholder">
+                            My contribution to the design, discussion and decision-making process will be recorded here.
+                        </p>
+
+                        <h3>Critical Evaluation</h3>
+                        <p class="status-placeholder">
+                            The strengths, limitations and implementation complexity of the proposal will be compared
+                            with the later Inquiro implementation.
+                        </p>
+
+                        <h3>Evidence</h3>
+                        <ul class="compact-list">
+                            <li>Team C Design Proposal</li>
+                            <li>Architecture diagram</li>
+                            <li>Meeting notes</li>
+                            <li>Evidence of my contribution</li>
+                        </ul>
+
+                        <p><strong>Learning outcomes addressed:</strong> LO1, LO2, LO3 and LO4.</p>
+
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+
+                    <hr />
+
+                    <section id="unit-8">
+                        <header class="major">
+                            <h2>8. Unit 8: Parse Tree Activity</h2>
+                        </header>
+
+                        <h3>Completed Activity</h3>
+
+                        <p class="status-placeholder">
+                            The completed parse tree, explanation and short reflection on language structure and
+                            natural-language processing will be added here.
+                        </p>
+
+                        <p><strong>Learning outcomes addressed:</strong> LO1 and LO2.</p>
+
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+
+                    <hr />
+
+                    <section id="discussion-3">
+                        <header class="major">
+                            <h2>9. Units 8–10: Collaborative Discussion 3</h2>
+                        </header>
+
+                        <span class="section-label">Ethical Issues in Deep Learning</span>
+
+                        <p class="status-placeholder">
+                            Final commentary and evidence will be added after reviewing the submitted discussion material.
+                        </p>
+
+                        <p><strong>Learning outcomes addressed:</strong> LO2, LO3 and LO4.</p>
+
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+
+                    <hr />
+
+                    <section id="discussion-3">
+
+    <header class="major">
+        <h2>9. Units 8–10: Collaborative Discussion 3</h2>
+    </header>
+
+    <span class="section-label">Ethical Issues in Deep Learning</span>
+
+    <p>
+        This discussion focused on the ethical implications of deep learning technologies.
+        In my initial post, I examined issues including bias, Explainable AI (XAI),
+        transparency and human oversight. I argued that although deep learning has
+        achieved remarkable technical progress, responsible deployment depends on
+        fairness, accountability and governance rather than model accuracy alone.
+    </p>
+
+    <p>
+        Feedback from my classmate introduced additional perspectives including the
+        NIST AI Risk Management Framework and the EU AI Act. This broadened my
+        understanding of how organisational governance and regulatory frameworks
+        complement technical safeguards such as bias testing and explainability.
+    </p>
+
+    <p>
+        While responding to other students, I explored practical approaches for
+        reducing ethical risks, including digital watermarking, provenance tracking,
+        stronger identity verification, improved dataset documentation and
+        continuous monitoring after deployment. These discussions helped me connect
+        ethical theory with practical software engineering decisions.
+    </p>
+
+    <p>
+        Overall, this discussion strengthened my understanding that responsible AI
+        requires continuous attention throughout the entire system lifecycle rather
+        than only during model development.
+    </p>
+
+    <p><strong>Learning outcomes addressed:</strong> LO2, LO3 and LO4.</p>
+
+    <h3>Evidence</h3>
+
+    <div class="evidence-grid">
+
+        <div class="evidence-card">
+            <h4>Initial Post</h4>
+            <p>Ethical issues in deep learning, including bias, XAI, transparency and governance.</p>
+            <a href="evidence/intelligent-agents/discussions/discussion-3/initial-post.md">View initial post</a>
+        </div>
+
+        <div class="evidence-card">
+            <h4>Feedback Received</h4>
+            <p>Peer feedback introducing NIST AI RMF, EU AI Act and governance frameworks.</p>
+            <a href="evidence/intelligent-agents/discussions/discussion-3/peer-feedback-received.md">View feedback received</a>
+        </div>
+
+        <div class="evidence-card">
+            <h4>My Peer Responses</h4>
+            <p>My responses discussing deepfakes, watermarking, transparency and responsible deployment.</p>
+            <a href="evidence/intelligent-agents/discussions/discussion-3/my-peer-responses.md">View my peer responses</a>
+        </div>
+
+        <div class="evidence-card">
+            <h4>Summary Post</h4>
+            <p>My reflection on fairness, governance, explainability and responsible AI.</p>
+            <a href="evidence/intelligent-agents/discussions/discussion-3/summary-post.md">View summary post</a>
+        </div>
+
+    </div>
+
+    <h3>Discussion Screenshots</h3>
+
+    <div class="screenshot-gallery">
+
+        <figure>
+            <a href="evidence/intelligent-agents/discussions/discussion-3/screenshots/initial-post.png" target="_blank">
+                <img src="evidence/intelligent-agents/discussions/discussion-3/screenshots/initial-post.png" alt="Initial post">
+            </a>
+            <figcaption>Initial post</figcaption>
+        </figure>
+
+        <figure>
+            <a href="evidence/intelligent-agents/discussions/discussion-3/screenshots/peer-response-1.png" target="_blank">
+                <img src="evidence/intelligent-agents/discussions/discussion-3/screenshots/peer-response-1.png" alt="Peer response 1">
+            </a>
+            <figcaption>Peer response 1</figcaption>
+        </figure>
+
+        <figure>
+            <a href="evidence/intelligent-agents/discussions/discussion-3/screenshots/peer-response-2.png" target="_blank">
+                <img src="evidence/intelligent-agents/discussions/discussion-3/screenshots/peer-response-2.png" alt="Peer response 2">
+            </a>
+            <figcaption>Peer response 2</figcaption>
+        </figure>
+
+        <figure>
+            <a href="evidence/intelligent-agents/discussions/discussion-3/screenshots/summary-post.png" target="_blank">
+                <img src="evidence/intelligent-agents/discussions/discussion-3/screenshots/summary-post.png" alt="Summary post">
+            </a>
+            <figcaption>Summary post</figcaption>
+        </figure>
+
+        <figure>
+            <a href="evidence/intelligent-agents/discussions/discussion-3/screenshots/peer-feedback.png" target="_blank">
+                <img src="evidence/intelligent-agents/discussions/discussion-3/screenshots/peer-feedback.png" alt="Peer feedback">
+            </a>
+            <figcaption>Peer feedback received</figcaption>
+        </figure>
+
+    </div>
+
+    <p><a href="#top">Back to contents</a></p>
+
+</section>  
+
+                    <hr />
+
+                    <section id="inquiro">
+                        <header class="major">
+                            <h2>11. Units 11–12: Individual Project – Inquiro</h2>
+                        </header>
+
+                        <h3>Project Overview</h3>
+                        <p class="status-placeholder">
+                            A concise explanation of the Inquiro academic research assistant will be added here.
+                        </p>
+
+                        <h3>Original Design and Final Architecture</h3>
+                        <p class="status-placeholder">
+                            This section will compare the Team C proposal with the final LangGraph workflow.
+                        </p>
+
+                        <h3>Agent Roles</h3>
+                        <ul class="compact-list">
+                            <li>Planner</li>
+                            <li>Retriever</li>
+                            <li>Processor</li>
+                            <li>Writer</li>
+                        </ul>
+
+                        <h3>Implementation Journey</h3>
+                        <p class="status-placeholder">
+                            The use of Python, LangGraph, Ollama, Llama 3.2 3B and the arXiv API will be explained here.
+                        </p>
+
+                        <h3>Testing and Validation</h3>
+                        <p class="status-placeholder">
+                            Unit tests, workflow testing, logs, intermediate outputs and remediation evidence will be
+                            summarised here.
+                        </p>
+
+                        <h3>Strengths</h3>
+                        <ul class="compact-list">
+                            <li>Clear separation of agent responsibilities</li>
+                            <li>Local model execution</li>
+                            <li>Saved intermediate outputs</li>
+                            <li>Logging and testing</li>
+                            <li>Real arXiv retrieval</li>
+                        </ul>
+
+                        <h3>Limitations and Future Improvements</h3>
+                        <p class="status-placeholder">
+                            The limitations of the local model, retrieval depth, command-line interface, limited
+                            evaluation time and absence of a human approval stage will be discussed here.
+                        </p>
+
+                        <h3>Project Evidence</h3>
+                        <ul class="compact-list">
+                            <li>Source code</li>
+                            <li>README</li>
+                            <li>Architecture diagram</li>
+                            <li>Testing evidence</li>
+                            <li>Screenshots</li>
+                            <li>Remediation log</li>
+                            <li>Presentation</li>
+                            <li>Audio transcript</li>
+                        </ul>
+
+                        <p><strong>Learning outcomes addressed:</strong> LO1, LO2 and LO3.</p>
+
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+
+                    <hr />
+
+                    <section id="case-studies">
+                        <header class="major">
+                            <h2>12. Three Reflective Case Studies</h2>
+                        </header>
+
+                        <h3>Case Study 1: AI Safety Constraints</h3>
+                        <p class="status-placeholder">
+                            Bounded autonomy, testing, safe failure and human oversight.
+                        </p>
+
+                        <h3>Case Study 2: Explainable Decisions in Agents</h3>
+                        <p class="status-placeholder">
+                            Agent stages, logs, intermediate outputs and traceability.
+                        </p>
+
+                        <h3>Case Study 3: Responsible Deployment</h3>
+                        <p class="status-placeholder">
+                            Reliability, source quality, model limitations and human review.
+                        </p>
+
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+
+                    <hr />
+
+                    <section id="professional-development">
+                        <header class="major">
+                            <h2>13. Team Meetings, Feedback and Professional Development</h2>
+                        </header>
+
+                        <h3>Team Meeting Notes</h3>
+
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Participants</th>
+                                        <th>Discussion or Decision</th>
+                                        <th>My Action or Contribution</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>To be added</td>
+                                        <td>To be added</td>
+                                        <td>To be added</td>
+                                        <td>To be added</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3>Feedback and Action Taken</h3>
+
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Source</th>
+                                        <th>Feedback</th>
+                                        <th>Action Taken</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>To be added</td>
+                                        <td>To be added</td>
+                                        <td>To be added</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3>Professional Skills Matrix and PDP</h3>
+
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Skill</th>
+                                        <th>Evidence</th>
+                                        <th>Current Position</th>
+                                        <th>Future Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Critical thinking</td>
+                                        <td>To be added</td>
+                                        <td>Developing</td>
+                                        <td>To be added</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Teamwork</td>
+                                        <td>To be added</td>
+                                        <td>Developing</td>
+                                        <td>To be added</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Problem-solving</td>
+                                        <td>To be added</td>
+                                        <td>Developing</td>
+                                        <td>To be added</td>
+                                    </tr>
+                                    <tr>
+                                        <td>IT and digital skills</td>
+                                        <td>To be added</td>
+                                        <td>Developing</td>
+                                        <td>To be added</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ethical awareness</td>
+                                        <td>To be added</td>
+                                        <td>Developing</td>
+                                        <td>To be added</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Critical reflection</td>
+                                        <td>To be added</td>
+                                        <td>Developing</td>
+                                        <td>To be added</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+
+                    <hr />
+
+                    <section id="final-reflection">
+                        <header class="major">
+                            <h2>14. Final Reflective Piece</h2>
+                        </header>
+
+                        <p><strong>Maximum word count:</strong> 1,000 words.</p>
+
+                        <h3>What?</h3>
+                        <p class="status-placeholder">
+                            Project outcome, team design, individual implementation and important technical incidents.
+                        </p>
+
+                        <h3>So What?</h3>
+                        <p class="status-placeholder">
+                            Critical analysis, emotional response, changes in understanding, teamwork and ethical development.
+                        </p>
+
+                        <h3>Now What?</h3>
+                        <p class="status-placeholder">
+                            Future technical learning, better testing, responsible AI practice and application to network automation.
+                        </p>
+
+                        <p><strong>Reflective framework:</strong> Rolfe, Freshwater and Jasper (2001).</p>
+
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+
+                    <hr />
+
+                    <section id="mapping">
+                        <header class="major">
+                            <h2>15. Learning Outcome Mapping</h2>
+                        </header>
+
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Evidence</th>
+                                        <th>LO1</th>
+                                        <th>LO2</th>
+                                        <th>LO3</th>
+                                        <th>LO4</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Discussion 1</td><td>✓</td><td></td><td></td><td>✓</td></tr>
+                                    <tr><td>Discussion 2</td><td>✓</td><td>✓</td><td></td><td>✓</td></tr>
+                                    <tr><td>Unit 6 Dialogue</td><td>✓</td><td>✓</td><td></td><td></td></tr>
+                                    <tr><td>Team C Proposal</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
+                                    <tr><td>Unit 8 Parse Tree</td><td>✓</td><td>✓</td><td></td><td></td></tr>
+                                    <tr><td>Discussion 3</td><td></td><td>✓</td><td>✓</td><td>✓</td></tr>
+                                    <tr><td>Unit 10 Activity</td><td></td><td>✓</td><td>✓</td><td></td></tr>
+                                    <tr><td>Inquiro Project</td><td>✓</td><td>✓</td><td>✓</td><td></td></tr>
+                                    <tr><td>Final Reflection</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+
+                    <hr />
+
+                    <section id="references">
+                        <header class="major">
+                            <h2>16. References</h2>
+                        </header>
+
+                        <p class="status-placeholder">
+                            The final Harvard reference list will be added after all portfolio sections are complete.
+                        </p>
+
+                        <p>
+                            Rolfe, G., Freshwater, D. and Jasper, M. (2001)
+                            <em>Critical reflection in nursing and the helping professions: a user's guide.</em>
+                            Basingstoke: Palgrave Macmillan.
+                        </p>
+
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+
+                </div>
+            </section>
+        </div>
+
+        <footer id="footer">
+            <div class="inner">
+                <ul class="copyright">
+                    <li>&copy; Vinod Jadhav</li>
+                    <li>Design: HTML5 UP</li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
+"""
+
+output = Path("/mnt/data/intelligent-agents-v2.1.html")
+output.write_text(html, encoding="utf-8")
+print(f"Created: {output}")
