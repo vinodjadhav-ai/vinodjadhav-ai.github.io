@@ -270,17 +270,66 @@
                             <h2>5. Unit 3: Correlation and Regression</h2>
                         </header>
                         <span class="section-label">Interpreting Relationships in Data</span>
-                        <p>Correlation helps describe whether two numeric variables change together, while regression is
-                            used to estimate or predict an outcome using explanatory variables. These ideas matter in
-                            practical modelling because an apparent pattern does not automatically establish that one
-                            variable causes the other.</p>
-                        <p>This section is reserved for the Unit 3 notebooks and the interpretation of their actual
-                            outputs. I will distinguish between exercises I have run and theoretical notes; no notebook
-                            results are claimed here until they have been verified.</p>
-                        <p><strong>Learning outcomes addressed:</strong> LO2 and LO3 (once evidenced).</p>
-                        <p class="status-placeholder"><strong>Evidence to add:</strong> Review and complete or document
-                            the supplied correlation/regression notebooks; add a completed-activity.md, reflection.md
-                            and any genuine outputs.</p>
+                        <p>In Unit 3, I ran four supplied Jupyter Notebook exercises to understand how data changes
+                            influence correlation, fitted regression models and predictions. I compared original and
+                            modified outputs for Pearson correlation, simple linear regression, multiple linear
+                            regression and polynomial regression.</p>
+                        <p>Increasing noise reduced Pearson correlation from 0.888 to 0.549. Changing one observation
+                            altered the simple regression slope and prediction. In the vehicle example, increasing the
+                            prediction input for weight from 2300 to 3300 while holding volume constant raised predicted
+                            CO2 from 107.21 to 114.76. In the polynomial exercise, changing one data point reduced the
+                            fitted-data R&sup2; from 0.9432 to 0.8109.</p>
+                        <p>These exercises helped me recognise the importance of interpreting results carefully,
+                            distinguishing a change to the training data from a change to prediction input, and avoiding
+                            causal claims based only on correlation.</p>
+                        <p><strong>Learning outcomes addressed:</strong> LO2; also relevant to LO1 through transparent
+                            reporting of model limitations.</p>
+                        <h3>Supporting Evidence</h3>
+                        <div class="evidence-grid">
+                            <div class="evidence-card">
+                                <h4>Completed Activity</h4>
+                                <p>All four exercises with original and modified results, interpretation and links to
+                                    genuine screenshots.</p>
+                                <a
+                                    href="evidence/machine-learning/unit-activities/unit-3-correlation-regression/completed-activity.md">View
+                                    completed activity</a>
+                            </div>
+                            <div class="evidence-card">
+                                <h4>Learning Reflection</h4>
+                                <p>My What? So What? Now What? reflection on data sensitivity, model evaluation and
+                                    responsible interpretation.</p>
+                                <a
+                                    href="evidence/machine-learning/unit-activities/unit-3-correlation-regression/reflection.md">View
+                                    reflection</a>
+                            </div>
+                        </div>
+                        <h3>Selected Activity Screenshots</h3>
+                        <div class="screenshot-gallery">
+                            <figure>
+                                <a href="evidence/machine-learning/unit-activities/unit-3-correlation-regression/screenshots/ex2-linear-original.png"
+                                    target="_blank" rel="noopener">
+                                    <img src="evidence/machine-learning/unit-activities/unit-3-correlation-regression/screenshots/ex2-linear-original.png"
+                                        alt="Original simple linear regression plot" />
+                                </a>
+                                <figcaption>Original linear regression</figcaption>
+                            </figure>
+                            <figure>
+                                <a href="evidence/machine-learning/unit-activities/unit-3-correlation-regression/screenshots/ex3-multiple-regression-modified.png"
+                                    target="_blank" rel="noopener">
+                                    <img src="evidence/machine-learning/unit-activities/unit-3-correlation-regression/screenshots/ex3-multiple-regression-modified.png"
+                                        alt="Multiple regression CO2 prediction with modified weight" />
+                                </a>
+                                <figcaption>Modified vehicle-weight prediction</figcaption>
+                            </figure>
+                            <figure>
+                                <a href="evidence/machine-learning/unit-activities/unit-3-correlation-regression/screenshots/ex4-polynomial-modified.png"
+                                    target="_blank" rel="noopener">
+                                    <img src="evidence/machine-learning/unit-activities/unit-3-correlation-regression/screenshots/ex4-polynomial-modified.png"
+                                        alt="Modified polynomial regression curve" />
+                                </a>
+                                <figcaption>Modified polynomial curve</figcaption>
+                            </figure>
+                        </div>
                         <p><a href="#top">Back to contents</a></p>
                     </section>
                     <hr />
