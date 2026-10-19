@@ -1,16 +1,18 @@
 <!DOCTYPE HTML>
 
 <html lang="en">
+
 <head>
-<title>Machine Learning | Vinod Jadhav</title>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"/>
-<meta content="Vinod Jadhav's Machine Learning module e-Portfolio for the MSc Artificial Intelligence programme." name="description"/>
-<link href="assets/css/main.css" rel="stylesheet"/>
-<noscript>
-<link href="assets/css/noscript.css" rel="stylesheet"/>
-</noscript>
-<style>
+    <title>Machine Learning | Vinod Jadhav</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport" />
+    <meta content="Vinod Jadhav's Machine Learning module e-Portfolio for the MSc Artificial Intelligence programme."
+        name="description" />
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <noscript>
+        <link href="assets/css/noscript.css" rel="stylesheet" />
+    </noscript>
+    <style>
         .portfolio-note {
             border-left: 4px solid currentColor;
             padding: 1rem 1.25rem;
@@ -87,139 +89,297 @@
         }
     </style>
 </head>
+
 <body class="is-preload">
-<div id="wrapper">
-<header id="header">
-<a class="logo" href="index.html">
-<strong>Vinod Jadhav</strong>
-<span>MSc AI e-Portfolio</span>
-</a>
-<nav>
-<a href="#menu">Menu</a>
-</nav>
-</header>
-<nav id="menu">
-<ul class="links">
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About Me</a></li>
-<li><a href="launch-into-computing.html">Launch Into Computing</a></li>
-<li><a href="understanding-ai.html">Understanding Artificial Intelligence</a></li>
-<li><a href="numerical-analysis.html">Numerical Analysis</a></li>
-<li><a href="intelligent-agents.html">Intelligent Agents</a></li>
-<li><a href="machine-learning.html">Machine Learning</a></li>
-<li><a href="krr.html">Knowledge Representation &amp; Reasoning</a></li>
-<li><a href="research-methods.html">Research Methods and Professional Practice</a></li>
-<li><a href="computing-project.html">Computing Project</a></li>
-<li><a href="skills-matrix.html">Skills Matrix</a></li>
-<li><a href="reflections.html">Reflections</a></li>
-</ul>
-</nav>
-<div class="alt" id="main">
-<section id="top"><div class="inner">
-<header class="major"><h1>Machine Learning</h1></header>
-<p>This page presents my learning journey and evidence from the Machine Learning module. It brings together collaborative discussions, data-analysis and neural-network activities, the Group D Airbnb project, my individual Fashion-MNIST assessment, feedback and critical reflection.</p>
-<p><strong>Live e-Portfolio:</strong> <a href="https://vinodjadhav-ai.github.io/" rel="noopener" target="_blank">https://vinodjadhav-ai.github.io/</a></p>
-<h2>Contents</h2>
-<ol class="quick-nav"><li><a href="#overview">Module Overview</a></li><li><a href="#outcomes">Learning Outcomes</a></li><li><a href="#journey">Learning Journey</a></li><li><a href="#discussion-1">Collaborative Discussion 1</a></li><li><a href="#unit-3">Unit 3: Correlation and Regression</a></li><li><a href="#unit-5-jaccard">Unit 5: Jaccard Distance</a></li><li><a href="#team-project">Group D: Airbnb NYC</a></li><li><a href="#unit-7">Unit 7: Perceptrons</a></li><li><a href="#discussion-2">Collaborative Discussion 2</a></li><li><a href="#unit-8">Unit 8: Gradient Descent</a></li><li><a href="#unit-9">Unit 9: CNN</a></li><li><a href="#fashion-mnist">Unit 11: Fashion-MNIST and Model Evaluation</a></li><li><a href="#professional-development">Professional Development</a></li><li><a href="#final-reflection">Final Reflection</a></li><li><a href="#mapping">Learning Outcome Mapping</a></li><li><a href="#references">References</a></li></ol>
-<hr/>
-<section id="overview">
-<header class="major"><h2>1. Module Overview</h2></header>
-<p>The Machine Learning module introduced methods for understanding data, recognising patterns and making predictions. I explored the connection between data preparation, statistical reasoning, clustering, regression, neural networks and model evaluation, alongside the ethical questions raised when machine learning is used in practice.</p><p>My learning involved two different assessed projects: a collaborative analysis of New York City Airbnb listings and an individual Fashion-MNIST clothing-image classification presentation. The first emphasised understanding a real-world dataset and evaluating price-prediction models; the second compared a simpler classification baseline with a convolutional neural network (CNN).</p><p>This e-portfolio brings together selected discussions, activities, project outcomes and critical reflection. Supporting files are linked separately where available, while activities still awaiting evidence are clearly identified.</p><div class="portfolio-note"><strong>Portfolio approach:</strong> the main page summarises learning and directs readers to supporting evidence. The reflective section is being prepared against the module’s 1,000-word limit; check the final university guidance before submission.</div>
-<p><a href="#top">Back to contents</a></p>
-</section>
-<hr/>
-<section id="outcomes">
-<header class="major"><h2>2. Module Learning Outcomes</h2></header>
-<ol><li>Articulate the legal, social, ethical and professional issues faced by machine learning professionals.</li><li>Understand the applicability and challenges associated with different datasets for machine learning algorithms.</li><li>Apply and critically appraise machine learning techniques to real-world problems where technical risk and uncertainty are involved.</li><li>Develop the skills required to contribute effectively as a member of a development team in a virtual professional environment.</li></ol><p>Discussion work contributed to my awareness of professional and ethical responsibilities (LO1). Data exploration, Jaccard calculations and the Airbnb project supported my understanding of datasets (LO2). The Airbnb and Fashion-MNIST assessments provided opportunities to interpret modelling results and limitations (LO3), while Group D collaboration supported virtual teamwork (LO4).</p>
-<p><a href="#top">Back to contents</a></p>
-</section>
-<hr/>
-<section id="journey">
-<header class="major"><h2>3. My Learning Journey</h2></header>
-<p>At the beginning of this module I could relate data analysis to my background in telecommunications and network engineering, but several machine learning terms were new to me. I initially tended to think of a model mainly in terms of its final accuracy or prediction. The early discussions and practical exercises encouraged me to pay more attention to the data and assumptions behind the result.</p><p>The Airbnb group project made this practical. I worked on exploratory data analysis, looking at characteristics of the listings and how price, room type and location might affect interpretation. I began to see why summary statistics and charts are needed before selecting or evaluating a predictive model.</p><p>Later, the Fashion-MNIST work introduced a different type of problem: image classification. Comparing logistic regression with a CNN helped me understand that more complex models can improve performance without eliminating errors. My main development has been moving from asking “does the model work?” to asking “what data was used, how well was it evaluated, and where could it fail?”</p>
-<p><a href="#top">Back to contents</a></p>
-</section>
-<hr/>
-<section id="discussion-1">
-<header class="major"><h2>4. Units 1–3: Collaborative Discussion 1 — Industry 4.0</h2></header>
-<span class="section-label">Industry 4.0, Industry 5.0 and socio-technical resilience</span>
-<p>My initial discussion drew on Metcalf (2024) to examine how automation, network telemetry and interconnected systems improve telecommunications operations but also create dependencies. I used the 2022 Rogers outage in Canada to discuss the wider effects of a network failure on emergency communications, businesses and customers.</p>
-<p>In two peer responses, I considered healthcare resilience through monitoring, ransomware prevention, patching, network segmentation and recovery exercises. The discussion moved my thinking beyond using anomaly detection alone: reliable services also depend on change-risk assessment, rollback, human judgement and clear coordination between teams.</p>
-<p>My final summary brought these ideas together. Industry 5.0, as I understand it now, is not only about adding intelligence and efficiency, but designing technology around people, sustainability and resilience. I have retained the original discussion posts and forum screenshots as evidence rather than rewriting them for the portfolio.</p>
-<p><strong>Learning outcomes addressed:</strong> LO1 and LO4.</p>
-<h3>Supporting Evidence</h3>
-<div class="evidence-grid">
-<div class="evidence-card"><h4>Initial Post</h4><p>Industry 4.0 in telecommunications, the Rogers outage and resilience.</p><a href="evidence/machine-learning/collaborative-discussion-1/initial-post.md">View initial post</a></div>
-<div class="evidence-card"><h4>My Peer Responses</h4><p>Two replies exploring healthcare cyber incidents, patching, monitoring and recovery planning.</p><a href="evidence/machine-learning/collaborative-discussion-1/peer-responses.md">View peer responses</a></div>
-<div class="evidence-card"><h4>Feedback Received</h4><p>Two classmates highlighted change control, staged rollout, rollback, independent management access and resilience testing.</p><a href="evidence/machine-learning/collaborative-discussion-1/feedback-received.md">View feedback received</a></div>
-<div class="evidence-card"><h4>Summary Post</h4><p>Final synthesis on Industry 5.0, human judgement and network resilience.</p><a href="evidence/machine-learning/collaborative-discussion-1/summary-post.md">View summary post</a></div>
-</div>
-<p><a href="evidence/machine-learning/collaborative-discussion-1/discussion-reflection.md">View short discussion reflection</a></p>
-<h3>Discussion Screenshots</h3>
-<div class="screenshot-gallery">
-<figure><a href="evidence/machine-learning/collaborative-discussion-1/screenshots/Discussion-1_Peer_feedback.png" rel="noopener" target="_blank"><img alt="Two classmates feedback on Industry 4.0 discussion and Rogers outage" src="evidence/machine-learning/collaborative-discussion-1/screenshots/Discussion-1_Peer_feedback.png"/></a><figcaption>Feedback received from classmates</figcaption></figure><figure><a href="evidence/machine-learning/collaborative-discussion-1/screenshots/Discussion-1_initial_post.png" rel="noopener" target="_blank"><img alt="Industry 4.0 initial discussion forum post" src="evidence/machine-learning/collaborative-discussion-1/screenshots/Discussion-1_initial_post.png"/></a><figcaption>Initial post</figcaption></figure>
-<figure><a href="evidence/machine-learning/collaborative-discussion-1/screenshots/Peer_response_1.png" rel="noopener" target="_blank"><img alt="Peer response about healthcare resilience" src="evidence/machine-learning/collaborative-discussion-1/screenshots/Peer_response_1.png"/></a><figcaption>Peer response 1</figcaption></figure>
-<figure><a href="evidence/machine-learning/collaborative-discussion-1/screenshots/peer_response_2.png" rel="noopener" target="_blank"><img alt="Peer response about WannaCry and NHS recovery" src="evidence/machine-learning/collaborative-discussion-1/screenshots/peer_response_2.png"/></a><figcaption>Peer response 2</figcaption></figure>
-<figure><a href="evidence/machine-learning/collaborative-discussion-1/screenshots/Discussion-1_summary_post.png" rel="noopener" target="_blank"><img alt="Industry 5.0 summary forum post" src="evidence/machine-learning/collaborative-discussion-1/screenshots/Discussion-1_summary_post.png"/></a><figcaption>Summary post</figcaption></figure>
-</div>
-<p><a href="#top">Back to contents</a></p>
-</section>
-<hr/>
-<section id="unit-3">
-<header class="major">
-<h2>5. Unit 3: Correlation and Regression</h2>
-</header>
-<span class="section-label">Interpreting Relationships in Data</span>
-<p>In Unit 3, I ran four supplied Jupyter Notebook exercises to understand how data changes influence correlation, fitted regression models and predictions. I compared original and modified outputs for Pearson correlation, simple linear regression, multiple linear regression and polynomial regression.</p>
-<p>Increasing noise reduced Pearson correlation from 0.888 to 0.549. Changing one observation altered the simple regression slope and prediction. In the vehicle example, increasing the prediction input for weight from 2300 to 3300 while holding volume constant raised predicted CO2 from 107.21 to 114.76. In the polynomial exercise, changing one data point reduced the fitted-data R² from 0.9432 to 0.8109.</p>
-<p>These exercises helped me recognise the importance of interpreting results carefully, distinguishing a change to the training data from a change to prediction input, and avoiding causal claims based only on correlation.</p>
-<p><strong>Learning outcomes addressed:</strong> LO2; also relevant to LO1 through transparent reporting of model limitations.</p>
-<h3>Supporting Evidence</h3>
-<div class="evidence-grid">
-<div class="evidence-card">
-<h4>Completed Activity</h4>
-<p>All four exercises with original and modified results, interpretation and links to genuine screenshots.</p>
-<a href="evidence/machine-learning/unit-activities/unit-3-correlation-regression/completed-activity.md">View completed activity</a>
-</div>
-<div class="evidence-card">
-<h4>Learning Reflection</h4>
-<p>My What? So What? Now What? reflection on data sensitivity, model evaluation and responsible interpretation.</p>
-<a href="evidence/machine-learning/unit-activities/unit-3-correlation-regression/reflection.md">View reflection</a>
-</div>
-</div>
-<h3>Selected Activity Screenshots</h3>
-<div class="screenshot-gallery">
-<figure>
-<a href="evidence/machine-learning/unit-activities/unit-3-correlation-regression/screenshots/ex2-linear-original.png" rel="noopener" target="_blank">
-<img alt="Original simple linear regression plot" src="evidence/machine-learning/unit-activities/unit-3-correlation-regression/screenshots/ex2-linear-original.png"/>
-</a>
-<figcaption>Original linear regression</figcaption>
-</figure>
-<figure>
-<a href="evidence/machine-learning/unit-activities/unit-3-correlation-regression/screenshots/ex3-multiple-regression-modified.png" rel="noopener" target="_blank">
-<img alt="Multiple regression CO2 prediction with modified weight" src="evidence/machine-learning/unit-activities/unit-3-correlation-regression/screenshots/ex3-multiple-regression-modified.png"/>
-</a>
-<figcaption>Modified vehicle-weight prediction</figcaption>
-</figure>
-<figure>
-<a href="evidence/machine-learning/unit-activities/unit-3-correlation-regression/screenshots/ex4-polynomial-modified.png" rel="noopener" target="_blank">
-<img alt="Modified polynomial regression curve" src="evidence/machine-learning/unit-activities/unit-3-correlation-regression/screenshots/ex4-polynomial-modified.png"/>
-</a>
-<figcaption>Modified polynomial curve</figcaption>
-</figure>
-</div>
-<p><a href="#top">Back to contents</a></p>
-</section>
-<hr/>
-<section id="unit-5-jaccard">
-<header class="major"><h2>6. Unit 5: Jaccard Distance / Dissimilarity</h2></header>
-<header class="major">
-<h2>Unit 5: Jaccard Distance / Dissimilarity</h2>
-</header>
-<span class="section-label">
+    <div id="wrapper">
+        <header id="header">
+            <a class="logo" href="index.html">
+                <strong>Vinod Jadhav</strong>
+                <span>MSc AI e-Portfolio</span>
+            </a>
+            <nav>
+                <a href="#menu">Menu</a>
+            </nav>
+        </header>
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="launch-into-computing.html">Launch Into Computing</a></li>
+                <li><a href="understanding-ai.html">Understanding Artificial Intelligence</a></li>
+                <li><a href="numerical-analysis.html">Numerical Analysis</a></li>
+                <li><a href="intelligent-agents.html">Intelligent Agents</a></li>
+                <li><a href="machine-learning.html">Machine Learning</a></li>
+                <li><a href="krr.html">Knowledge Representation &amp; Reasoning</a></li>
+                <li><a href="research-methods.html">Research Methods and Professional Practice</a></li>
+                <li><a href="computing-project.html">Computing Project</a></li>
+                <li><a href="skills-matrix.html">Skills Matrix</a></li>
+                <li><a href="reflections.html">Reflections</a></li>
+            </ul>
+        </nav>
+        <div class="alt" id="main">
+            <section id="top">
+                <div class="inner">
+                    <header class="major">
+                        <h1>Machine Learning</h1>
+                    </header>
+                    <p>This page presents my learning journey and evidence from the Machine Learning module. It brings
+                        together collaborative discussions, data-analysis and neural-network activities, the Group D
+                        Airbnb project, my individual Fashion-MNIST assessment, feedback and critical reflection.</p>
+                    <p><strong>Live e-Portfolio:</strong> <a href="https://vinodjadhav-ai.github.io/" rel="noopener"
+                            target="_blank">https://vinodjadhav-ai.github.io/</a></p>
+                    <h2>Contents</h2>
+                    <ol class="quick-nav">
+                        <li><a href="#overview">Module Overview</a></li>
+                        <li><a href="#outcomes">Learning Outcomes</a></li>
+                        <li><a href="#journey">Learning Journey</a></li>
+                        <li><a href="#discussion-1">Collaborative Discussion 1</a></li>
+                        <li><a href="#unit-3">Unit 3: Correlation and Regression</a></li>
+                        <li><a href="#unit-5-jaccard">Unit 5: Jaccard Distance</a></li>
+                        <li><a href="#team-project">Group D: Airbnb NYC</a></li>
+                        <li><a href="#unit-7">Unit 7: Perceptrons</a></li>
+                        <li><a href="#discussion-2">Collaborative Discussion 2</a></li>
+                        <li><a href="#unit-8">Unit 8: Gradient Descent</a></li>
+                        <li><a href="#unit-9">Unit 9: CNN</a></li>
+                        <li><a href="#fashion-mnist">Unit 11: Fashion-MNIST and Model Evaluation</a></li>
+                        <li><a href="#professional-development">Professional Development</a></li>
+                        <li><a href="#final-reflection">Final Reflection</a></li>
+                        <li><a href="#mapping">Learning Outcome Mapping</a></li>
+                        <li><a href="#references">References</a></li>
+                    </ol>
+                    <hr />
+                    <section id="overview">
+                        <header class="major">
+                            <h2>1. Module Overview</h2>
+                        </header>
+                        <p>The Machine Learning module introduced methods for understanding data, recognising patterns
+                            and making predictions. I explored the connection between data preparation, statistical
+                            reasoning, clustering, regression, neural networks and model evaluation, alongside the
+                            ethical questions raised when machine learning is used in practice.</p>
+                        <p>My learning involved two different assessed projects: a collaborative analysis of New York
+                            City Airbnb listings and an individual Fashion-MNIST clothing-image classification
+                            presentation. The first emphasised understanding a real-world dataset and evaluating
+                            price-prediction models; the second compared a simpler classification baseline with a
+                            convolutional neural network (CNN).</p>
+                        <p>This e-portfolio brings together selected discussions, activities, project outcomes and
+                            critical reflection. Supporting files are linked separately where available, while
+                            activities still awaiting evidence are clearly identified.</p>
+                        <div class="portfolio-note"><strong>Portfolio approach:</strong> the main page summarises
+                            learning and directs readers to supporting evidence. The reflective section is being
+                            prepared against the module’s 1,000-word limit; check the final university guidance before
+                            submission.</div>
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+                    <hr />
+                    <section id="outcomes">
+                        <header class="major">
+                            <h2>2. Module Learning Outcomes</h2>
+                        </header>
+                        <ol>
+                            <li>Articulate the legal, social, ethical and professional issues faced by machine learning
+                                professionals.</li>
+                            <li>Understand the applicability and challenges associated with different datasets for
+                                machine learning algorithms.</li>
+                            <li>Apply and critically appraise machine learning techniques to real-world problems where
+                                technical risk and uncertainty are involved.</li>
+                            <li>Develop the skills required to contribute effectively as a member of a development team
+                                in a virtual professional environment.</li>
+                        </ol>
+                        <p>Discussion work contributed to my awareness of professional and ethical responsibilities
+                            (LO1). Data exploration, Jaccard calculations and the Airbnb project supported my
+                            understanding of datasets (LO2). The Airbnb and Fashion-MNIST assessments provided
+                            opportunities to interpret modelling results and limitations (LO3), while Group D
+                            collaboration supported virtual teamwork (LO4).</p>
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+                    <hr />
+                    <section id="journey">
+                        <header class="major">
+                            <h2>3. My Learning Journey</h2>
+                        </header>
+                        <p>At the beginning of this module I could relate data analysis to my background in
+                            telecommunications and network engineering, but several machine learning terms were new to
+                            me. I initially tended to think of a model mainly in terms of its final accuracy or
+                            prediction. The early discussions and practical exercises encouraged me to pay more
+                            attention to the data and assumptions behind the result.</p>
+                        <p>The Airbnb group project made this practical. I worked on exploratory data analysis, looking
+                            at characteristics of the listings and how price, room type and location might affect
+                            interpretation. I began to see why summary statistics and charts are needed before selecting
+                            or evaluating a predictive model.</p>
+                        <p>Later, the Fashion-MNIST work introduced a different type of problem: image classification.
+                            Comparing logistic regression with a CNN helped me understand that more complex models can
+                            improve performance without eliminating errors. My main development has been moving from
+                            asking “does the model work?” to asking “what data was used, how well was it evaluated, and
+                            where could it fail?”</p>
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+                    <hr />
+                    <section id="discussion-1">
+                        <header class="major">
+                            <h2>4. Units 1–3: Collaborative Discussion 1 — Industry 4.0</h2>
+                        </header>
+                        <span class="section-label">Industry 4.0, Industry 5.0 and socio-technical resilience</span>
+                        <p>My initial discussion drew on Metcalf (2024) to examine how automation, network telemetry and
+                            interconnected systems improve telecommunications operations but also create dependencies. I
+                            used the 2022 Rogers outage in Canada to discuss the wider effects of a network failure on
+                            emergency communications, businesses and customers.</p>
+                        <p>In two peer responses, I considered healthcare resilience through monitoring, ransomware
+                            prevention, patching, network segmentation and recovery exercises. The discussion moved my
+                            thinking beyond using anomaly detection alone: reliable services also depend on change-risk
+                            assessment, rollback, human judgement and clear coordination between teams.</p>
+                        <p>My final summary brought these ideas together. Industry 5.0, as I understand it now, is not
+                            only about adding intelligence and efficiency, but designing technology around people,
+                            sustainability and resilience. I have retained the original discussion posts and forum
+                            screenshots as evidence rather than rewriting them for the portfolio.</p>
+                        <p><strong>Learning outcomes addressed:</strong> LO1 and LO4.</p>
+                        <h3>Supporting Evidence</h3>
+                        <div class="evidence-grid">
+                            <div class="evidence-card">
+                                <h4>Initial Post</h4>
+                                <p>Industry 4.0 in telecommunications, the Rogers outage and resilience.</p><a
+                                    href="evidence/machine-learning/collaborative-discussion-1/initial-post.md">View
+                                    initial post</a>
+                            </div>
+                            <div class="evidence-card">
+                                <h4>My Peer Responses</h4>
+                                <p>Two replies exploring healthcare cyber incidents, patching, monitoring and recovery
+                                    planning.</p><a
+                                    href="evidence/machine-learning/collaborative-discussion-1/peer-responses.md">View
+                                    peer responses</a>
+                            </div>
+                            <div class="evidence-card">
+                                <h4>Feedback Received</h4>
+                                <p>Two classmates highlighted change control, staged rollout, rollback, independent
+                                    management access and resilience testing.</p><a
+                                    href="evidence/machine-learning/collaborative-discussion-1/feedback-received.md">View
+                                    feedback received</a>
+                            </div>
+                            <div class="evidence-card">
+                                <h4>Summary Post</h4>
+                                <p>Final synthesis on Industry 5.0, human judgement and network resilience.</p><a
+                                    href="evidence/machine-learning/collaborative-discussion-1/summary-post.md">View
+                                    summary post</a>
+                            </div>
+                        </div>
+                        <p><a href="evidence/machine-learning/collaborative-discussion-1/discussion-reflection.md">View
+                                short discussion reflection</a></p>
+                        <h3>Discussion Screenshots</h3>
+                        <div class="screenshot-gallery">
+                            <figure><a
+                                    href="evidence/machine-learning/collaborative-discussion-1/screenshots/Discussion-1_Peer_feedback.png"
+                                    rel="noopener" target="_blank"><img
+                                        alt="Two classmates feedback on Industry 4.0 discussion and Rogers outage"
+                                        src="evidence/machine-learning/collaborative-discussion-1/screenshots/Discussion-1_Peer_feedback.png" /></a>
+                                <figcaption>Feedback received from classmates</figcaption>
+                            </figure>
+                            <figure><a
+                                    href="evidence/machine-learning/collaborative-discussion-1/screenshots/Discussion-1_initial_post.png"
+                                    rel="noopener" target="_blank"><img alt="Industry 4.0 initial discussion forum post"
+                                        src="evidence/machine-learning/collaborative-discussion-1/screenshots/Discussion-1_initial_post.png" /></a>
+                                <figcaption>Initial post</figcaption>
+                            </figure>
+                            <figure><a
+                                    href="evidence/machine-learning/collaborative-discussion-1/screenshots/Peer_response_1.png"
+                                    rel="noopener" target="_blank"><img alt="Peer response about healthcare resilience"
+                                        src="evidence/machine-learning/collaborative-discussion-1/screenshots/Peer_response_1.png" /></a>
+                                <figcaption>Peer response 1</figcaption>
+                            </figure>
+                            <figure><a
+                                    href="evidence/machine-learning/collaborative-discussion-1/screenshots/peer_response_2.png"
+                                    rel="noopener" target="_blank"><img
+                                        alt="Peer response about WannaCry and NHS recovery"
+                                        src="evidence/machine-learning/collaborative-discussion-1/screenshots/peer_response_2.png" /></a>
+                                <figcaption>Peer response 2</figcaption>
+                            </figure>
+                            <figure><a
+                                    href="evidence/machine-learning/collaborative-discussion-1/screenshots/Discussion-1_summary_post.png"
+                                    rel="noopener" target="_blank"><img alt="Industry 5.0 summary forum post"
+                                        src="evidence/machine-learning/collaborative-discussion-1/screenshots/Discussion-1_summary_post.png" /></a>
+                                <figcaption>Summary post</figcaption>
+                            </figure>
+                        </div>
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+                    <hr />
+                    <section id="unit-3">
+                        <header class="major">
+                            <h2>5. Unit 3: Correlation and Regression</h2>
+                        </header>
+                        <span class="section-label">Interpreting Relationships in Data</span>
+                        <p>In Unit 3, I ran four supplied Jupyter Notebook exercises to understand how data changes
+                            influence correlation, fitted regression models and predictions. I compared original and
+                            modified outputs for Pearson correlation, simple linear regression, multiple linear
+                            regression and polynomial regression.</p>
+                        <p>Increasing noise reduced Pearson correlation from 0.888 to 0.549. Changing one observation
+                            altered the simple regression slope and prediction. In the vehicle example, increasing the
+                            prediction input for weight from 2300 to 3300 while holding volume constant raised predicted
+                            CO2 from 107.21 to 114.76. In the polynomial exercise, changing one data point reduced the
+                            fitted-data R² from 0.9432 to 0.8109.</p>
+                        <p>These exercises helped me recognise the importance of interpreting results carefully,
+                            distinguishing a change to the training data from a change to prediction input, and avoiding
+                            causal claims based only on correlation.</p>
+                        <p><strong>Learning outcomes addressed:</strong> LO2; also relevant to LO1 through transparent
+                            reporting of model limitations.</p>
+                        <h3>Supporting Evidence</h3>
+                        <div class="evidence-grid">
+                            <div class="evidence-card">
+                                <h4>Completed Activity</h4>
+                                <p>All four exercises with original and modified results, interpretation and links to
+                                    genuine screenshots.</p>
+                                <a
+                                    href="evidence/machine-learning/unit-activities/unit-3-correlation-regression/completed-activity.md">View
+                                    completed activity</a>
+                            </div>
+                            <div class="evidence-card">
+                                <h4>Learning Reflection</h4>
+                                <p>My What? So What? Now What? reflection on data sensitivity, model evaluation and
+                                    responsible interpretation.</p>
+                                <a
+                                    href="evidence/machine-learning/unit-activities/unit-3-correlation-regression/reflection.md">View
+                                    reflection</a>
+                            </div>
+                        </div>
+                        <h3>Selected Activity Screenshots</h3>
+                        <div class="screenshot-gallery">
+                            <figure>
+                                <a href="evidence/machine-learning/unit-activities/unit-3-correlation-regression/screenshots/ex2-linear-original.png"
+                                    rel="noopener" target="_blank">
+                                    <img alt="Original simple linear regression plot"
+                                        src="evidence/machine-learning/unit-activities/unit-3-correlation-regression/screenshots/ex2-linear-original.png" />
+                                </a>
+                                <figcaption>Original linear regression</figcaption>
+                            </figure>
+                            <figure>
+                                <a href="evidence/machine-learning/unit-activities/unit-3-correlation-regression/screenshots/ex3-multiple-regression-modified.png"
+                                    rel="noopener" target="_blank">
+                                    <img alt="Multiple regression CO2 prediction with modified weight"
+                                        src="evidence/machine-learning/unit-activities/unit-3-correlation-regression/screenshots/ex3-multiple-regression-modified.png" />
+                                </a>
+                                <figcaption>Modified vehicle-weight prediction</figcaption>
+                            </figure>
+                            <figure>
+                                <a href="evidence/machine-learning/unit-activities/unit-3-correlation-regression/screenshots/ex4-polynomial-modified.png"
+                                    rel="noopener" target="_blank">
+                                    <img alt="Modified polynomial regression curve"
+                                        src="evidence/machine-learning/unit-activities/unit-3-correlation-regression/screenshots/ex4-polynomial-modified.png" />
+                                </a>
+                                <figcaption>Modified polynomial curve</figcaption>
+                            </figure>
+                        </div>
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+                    <hr />
+                    <section id="unit-5-jaccard">
+                        <header class="major">
+                            <h2>6. Unit 5: Jaccard Distance / Dissimilarity</h2>
+                        </header>
+                        <header class="major">
+                            <h2>Unit 5: Jaccard Distance / Dissimilarity</h2>
+                        </header>
+                        <span class="section-label">
                             Understanding Similarity in Clustering
                         </span>
-<p>
+                        <p>
                             In this activity, I compared medical test results
                             for three individuals using Jaccard Distance.
                             I converted the asymmetric attributes into binary
@@ -227,348 +387,977 @@
                             by 1, and No and Absent by 0.
                             Gender was excluded as instructed in the activity.
                         </p>
-<p>
+                        <p>
                             I calculated the distance between Jack and Mary,
                             Jack and Jim, and Jim and Mary. This helped me
                             understand how Jaccard Distance measures
                             dissimilarity and why matching zero values
                             are excluded when comparing asymmetric binary data.
                         </p>
-<h3>Supporting Evidence</h3>
-<div class="evidence-grid">
-<div class="evidence-card">
-<h4>Completed Activity</h4>
-<p>
+                        <h3>Supporting Evidence</h3>
+                        <div class="evidence-grid">
+                            <div class="evidence-card">
+                                <h4>Completed Activity</h4>
+                                <p>
                                     Original dataset, binary conversion,
                                     Jaccard formula, calculations,
                                     final results and interpretation.
                                 </p>
-<a href="evidence/machine-learning/unit-activities/unit-5-jaccard/completed-activity.md">
+                                <a
+                                    href="evidence/machine-learning/unit-activities/unit-5-jaccard/completed-activity.md">
                                     View completed activity
                                 </a>
-</div>
-<div class="evidence-card">
-<h4>Activity Reflection</h4>
-<p>
+                            </div>
+                            <div class="evidence-card">
+                                <h4>Activity Reflection</h4>
+                                <p>
                                     My reflection on asymmetric binary data,
                                     distance calculations and their
                                     relevance to clustering.
                                 </p>
-<a href="evidence/machine-learning/unit-activities/unit-5-jaccard/reflection.md">
+                                <a href="evidence/machine-learning/unit-activities/unit-5-jaccard/reflection.md">
                                     View reflection
                                 </a>
-</div>
-</div>
-<h3>Calculation Results</h3>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr>
-<th>Comparison</th>
-<th>Jaccard Distance</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Jack and Mary</td>
-<td>0.33</td>
-</tr>
-<tr>
-<td>Jack and Jim</td>
-<td>0.67</td>
-</tr>
-<tr>
-<td>Jim and Mary</td>
-<td>0.75</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>
+                            </div>
+                        </div>
+                        <h3>Calculation Results</h3>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Comparison</th>
+                                        <th>Jaccard Distance</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Jack and Mary</td>
+                                        <td>0.33</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jack and Jim</td>
+                                        <td>0.67</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jim and Mary</td>
+                                        <td>0.75</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>
                             Jack and Mary had the lowest Jaccard Distance,
                             making them the most similar pair.
                             Jim and Mary had the highest distance,
                             making them the most dissimilar pair.
                         </p>
-<h3>Learning Outcomes</h3>
-<p>
+                        <h3>Learning Outcomes</h3>
+                        <p>
                             This activity helped me understand how different
                             types of data affect the choice of similarity
                             and distance measures in machine learning.
                         </p>
-<p>
-<strong>Learning outcome addressed:</strong>
+                        <p>
+                            <strong>Learning outcome addressed:</strong>
                             Understanding the applicability and challenges
                             associated with different datasets for machine
                             learning algorithms.
                         </p>
-<p><strong>Learning outcome addressed:</strong> LO2.</p>
-<p><a href="#top">Back to contents</a></p>
-</section>
-<hr/>
-<section id="team-project">
-<header class="major"><h2>7. Unit 6: Group D — Airbnb NYC Project</h2></header>
-<span class="section-label">Market Segmentation and Price Prediction</span>
-<h3>Project Overview</h3>
-<p>Our Group D project explored market segments and listing prices in New York City using the <em>AB_NYC_2019</em> dataset of 48,895 listings and 16 variables. Regression helped evaluate whether available features could predict price; clustering helped identify groups of comparable listings. The central question was how to give hosts more useful pricing guidance than a single city-wide average.</p>
-<h3>My Individual Contribution — Data Understanding and EDA</h3>
-<p>My assigned work was data understanding and exploratory data analysis (EDA), as reflected in our Trello task board. I inspected missing values, unique listing IDs and unusual prices, then compared price distributions, room types and boroughs. I found that the mean price ($152.72) was considerably above the median ($106), so I used a 95th-percentile view to make the common price range easier to interpret. This was a visualisation choice, not removal of expensive listings from the dataset.</p>
-<p>I also recorded why location needed consideration during data preparation: borough median prices were different, while the detailed <code>neighbourhood</code> field contained 221 categories. The two notebooks and my location decision note record these checks and observations.</p>
-<h3>Team Planning and Responsibilities</h3>
-<p>The group used Trello to organise tasks across EDA, clustering, price prediction, visualisation and final reporting. The exported board names EDA under my initials. It provides evidence of task allocation and shared coordination, although it is not a formal peer-evaluation record.</p>
-<h3>Selected Group Findings</h3>
-<div class="table-wrapper"><table><thead><tr><th>Measure</th><th>Reported result</th></tr></thead><tbody>
-<tr><td>Listings / variables</td><td>48,895 / 16</td></tr>
-<tr><td>Mean / median price</td><td>$152.72 / $106</td></tr>
-<tr><td>Median entire-home / private-room / shared-room prices</td><td>$160 / $70 / $45</td></tr>
-<tr><td>Manhattan / Brooklyn / Bronx median prices</td><td>$150 / $90 / $65</td></tr>
-<tr><td>HGB test MAE / RMSE / R²</td><td>$59.38 / $205.05 / 0.146</td></tr>
-<tr><td>Market segments identified</td><td>9 (4 entire-home, 3 private-room, 2 shared-room)</td></tr></tbody></table></div>
-<p>These are results from our <strong>collective report</strong>, not claims that I personally trained the regression and clustering models. Although Gradient Boosting compared well against the other tested approaches, the low R² showed substantial unexplained price variation. This limited how confidently a model could recommend an individual listing price.</p>
-<h3>Critical Reflection</h3>
-<h4>What?</h4><p>I contributed raw-data checks, visual exploration and the interpretation of room-type and borough pricing patterns.</p>
-<h4>So What?</h4><p>EDA taught me that data quality and presentation affect the next stages of a project. Comparing the mean with the median and showing both full and limited price views helped me avoid oversimplifying a skewed market. Teamwork also required explanations that other members could use without recreating all the analysis.</p>
-<h4>Now What?</h4><p>For another group analysis, I would agree a shared data dictionary earlier, record cleaning and feature decisions centrally and share draft charts with clear captions before the final report stage.</p>
-<p><strong>Learning outcomes addressed:</strong> LO2, LO3 and LO4, through dataset evaluation, model-result interpretation and collaboration.</p>
-<h3>Supporting Evidence</h3>
-<div class="evidence-grid">
-<div class="evidence-card"><h4>Group D Final Report</h4><p>Submitted group findings, segmentation, regression results and appendices.</p><a href="evidence/machine-learning/group-d-airbnb/group-final-report.pdf">View final report</a></div>
-<div class="evidence-card"><h4>My EDA Contribution</h4><p>Data quality checks, notebooks, six charts and the location decision note.</p><a href="evidence/machine-learning/group-d-airbnb/my-eda-contribution.md">View EDA evidence</a></div>
-<div class="evidence-card"><h4>Project Summary</h4><p>Business question, group methods, findings and limitations.</p><a href="evidence/machine-learning/group-d-airbnb/group-project-summary.md">View project summary</a></div>
-<div class="evidence-card"><h4>Teamwork Reflection</h4><p>Rolfe What? So What? Now What? reflection and Trello-based task allocation.</p><a href="evidence/machine-learning/group-d-airbnb/teamwork-reflection.md">View teamwork reflection</a></div>
-<div class="evidence-card"><h4>Project Trello Board</h4><p>Saved task allocation and shared coordination records.</p><a href="evidence/machine-learning/group-d-airbnb/trello-team-board.pdf">View Trello evidence</a></div>
-<div class="evidence-card"><h4>My EDA Notebooks</h4><p>Original analysis code for raw data and exploratory visualisations.</p><a href="evidence/machine-learning/group-d-airbnb/notebooks/01_data_understanding.ipynb">Data understanding</a> · <a href="evidence/machine-learning/group-d-airbnb/notebooks/02_eda.ipynb">EDA</a></div>
-</div>
-<h3>Selected EDA Screenshots</h3>
-<div class="screenshot-gallery">
-<figure><img alt="Full Airbnb price distribution showing skew and high-end outliers" loading="lazy" src="evidence/machine-learning/group-d-airbnb/screenshots/price_distribution_all.png"/><figcaption>Original price distribution — right-skewed data</figcaption></figure>
-<figure><img alt="Airbnb prices limited to the 95th percentile for visualisation" loading="lazy" src="evidence/machine-learning/group-d-airbnb/screenshots/price_distribution_95pct.png"/><figcaption>95th-percentile price view</figcaption></figure>
-<figure><img alt="Median Airbnb prices by room type" loading="lazy" src="evidence/machine-learning/group-d-airbnb/screenshots/median_price_by_room_type.png"/><figcaption>Median price by room type</figcaption></figure>
-<figure><img alt="Median Airbnb prices by borough" loading="lazy" src="evidence/machine-learning/group-d-airbnb/screenshots/median_price_by_neighbourhood_group.png"/><figcaption>Median price by neighbourhood group</figcaption></figure>
-<figure><img alt="Counts of Airbnb listings by room type" loading="lazy" src="evidence/machine-learning/group-d-airbnb/screenshots/room_type_counts.png"/><figcaption>Listing counts by room type</figcaption></figure>
-<figure><img alt="Counts of Airbnb listings by borough" loading="lazy" src="evidence/machine-learning/group-d-airbnb/screenshots/neighbourhood_group_counts.png"/><figcaption>Listing counts by borough</figcaption></figure>
-</div>
-<p><a href="#top">Back to contents</a></p>
-</section>
-<hr/>
-<section id="unit-7">
-<header class="major"><h2>8. Unit 7: Perceptron Activities</h2></header>
-<span class="section-label">Foundations of Artificial Neural Networks</span>
-<p>I completed three notebook exercises to explore how perceptrons work. In the simple perceptron example, manually changing a weight switched the output from 1 to 0. In the AND exercise, the perceptron learned to classify the four logical input combinations. The multilayer example then demonstrated how hidden neurons and a sigmoid activation function can represent XOR, which cannot be learned by a single standard perceptron.</p>
-<p>Changing the AND learning rate from <code>0.1</code> to <code>0.2</code> resulted in different final weights (<code>[0.5, 0.5]</code> versus <code>[0.6, 0.6]</code>), while all four predictions remained correct. For the multilayer XOR notebook, I recorded the training error decreasing and the final correct outputs (<code>0, 1, 1, 0</code>). I did not carry out a separate epoch or learning-rate comparison for that example.</p>
-<p><strong>Learning outcomes addressed:</strong> LO2 and LO3, through understanding model behaviour, training choices and limitations.</p>
-<h3>Supporting Evidence</h3>
-<div class="evidence-grid">
-<div class="evidence-card">
-<h4>Completed Activity</h4>
-<p>Results from all three perceptron notebooks, including input weights, learning-rate comparison and XOR predictions.</p>
-<a href="evidence/machine-learning/unit-activities/unit-7-perceptron/completed-activity.md">View completed activity</a>
-</div>
-<div class="evidence-card">
-<h4>Activity Reflection</h4>
-<p>What? So What? Now What? — how these experiments developed my understanding of neural networks.</p>
-<a href="evidence/machine-learning/unit-activities/unit-7-perceptron/reflection.md">View reflection</a>
-</div>
-</div>
-<h3>Selected Screenshots</h3>
-<div class="screenshot-gallery">
-<figure>
-<a href="evidence/machine-learning/unit-activities/unit-7-perceptron/screenshots/ex1-simple-modified.png" rel="noopener" target="_blank"><img alt="Simple perceptron modified weights and output" src="evidence/machine-learning/unit-activities/unit-7-perceptron/screenshots/ex1-simple-modified.png"/></a>
-<figcaption>Exercise 1 — effect of changing weights</figcaption>
-</figure>
-<figure>
-<a href="evidence/machine-learning/unit-activities/unit-7-perceptron/screenshots/ex2-and-modified.png" rel="noopener" target="_blank"><img alt="AND perceptron verification after learning rate modification" src="evidence/machine-learning/unit-activities/unit-7-perceptron/screenshots/ex2-and-modified.png"/></a>
-<figcaption>Exercise 2 — AND operator after training</figcaption>
-</figure>
-<figure>
-<a href="evidence/machine-learning/unit-activities/unit-7-perceptron/screenshots/ex3-multilayer-xor-results.png" rel="noopener" target="_blank"><img alt="Multilayer perceptron XOR prediction results" src="evidence/machine-learning/unit-activities/unit-7-perceptron/screenshots/ex3-multilayer-xor-results.png"/></a>
-<figcaption>Exercise 3 — XOR predictions</figcaption>
-</figure>
-</div>
-<p><a href="#top">Back to contents</a></p>
-</section>
-<hr/>
-<section id="discussion-2">
-<header class="major"><h2>9. Units 8–10: Collaborative Discussion 2 — Legal and Ethical Views on ANN Applications</h2></header>
-<span class="section-label">Robo-writers, accuracy, privacy and accountability</span>
-<p>My initial post considered Hutson (2021) and the benefits of AI-assisted writing for emails, meeting summaries and technical documentation. Drawing on my networking experience, I raised concerns about fluent but inaccurate incident reports, confidentiality and loss of human judgement.</p>
-<p>I responded to two classmates about appropriate levels of human review, creativity and the different expectations placed on AI and human decision-making. Their perspectives helped me move from focusing only on errors towards evaluating how serious the errors are, whether benefits justify the risks and what practical safeguards can be put in place.</p>
-<p>In feedback on my initial post, a classmate proposed grounding incident reports in approved logs and tickets, distinguishing confirmed from suspected causes, and measuring total drafting <em>and verification</em> effort. This later feedback made the link between ethical concerns and engineering practice more concrete. My summary post, submitted the previous day, already reflected a more balanced view of productivity, risk and human oversight.</p>
-<p><strong>Learning outcomes addressed:</strong> LO1 and LO4.</p>
-<h3>Supporting Evidence</h3><div class="evidence-grid">
-<div class="evidence-card"><h4>Initial Post</h4><p>Hutson (2021), AI writing benefits, technical-report accuracy, privacy and creative work.</p><a href="evidence/machine-learning/collaborative-discussion-2/initial-post.md">View initial post</a></div>
-<div class="evidence-card"><h4>My Peer Responses</h4><p>Two replies on risk-based human review, algorithm aversion, privacy and creative diversity.</p><a href="evidence/machine-learning/collaborative-discussion-2/peer-responses.md">View peer responses</a></div>
-<div class="evidence-card"><h4>Feedback Received</h4><p>Practical suggestions for source-grounded reporting, confidentiality and measuring actual productivity.</p><a href="evidence/machine-learning/collaborative-discussion-2/feedback-received.md">View feedback received</a></div>
-<div class="evidence-card"><h4>Summary Post</h4><p>How discussion changed my view on useful but fallible AI writing tools.</p><a href="evidence/machine-learning/collaborative-discussion-2/summary-post.md">View summary post</a></div>
-</div>
-<p><a href="evidence/machine-learning/collaborative-discussion-2/discussion-reflection.md">View short discussion reflection</a></p>
-<h3>Discussion Screenshots</h3><div class="screenshot-gallery">
-<figure><a href="evidence/machine-learning/collaborative-discussion-2/screenshots/Discussion-2_Initial-Post.png" rel="noopener" target="_blank"><img alt="Collaborative Discussion 2 — Initial post" src="evidence/machine-learning/collaborative-discussion-2/screenshots/Discussion-2_Initial-Post.png"/></a><figcaption>Initial post</figcaption></figure>
-<figure><a href="evidence/machine-learning/collaborative-discussion-2/screenshots/Discussion-2-Peer-Response-1.png" rel="noopener" target="_blank"><img alt="Collaborative Discussion 2 — Peer response 1" src="evidence/machine-learning/collaborative-discussion-2/screenshots/Discussion-2-Peer-Response-1.png"/></a><figcaption>Peer response 1</figcaption></figure>
-<figure><a href="evidence/machine-learning/collaborative-discussion-2/screenshots/Discussion-2-Peer-Response-2.png" rel="noopener" target="_blank"><img alt="Collaborative Discussion 2 — Peer response 2" src="evidence/machine-learning/collaborative-discussion-2/screenshots/Discussion-2-Peer-Response-2.png"/></a><figcaption>Peer response 2</figcaption></figure>
-<figure><a href="evidence/machine-learning/collaborative-discussion-2/screenshots/Discussion-2-Peer-Feedback.png" rel="noopener" target="_blank"><img alt="Collaborative Discussion 2 — Feedback received" src="evidence/machine-learning/collaborative-discussion-2/screenshots/Discussion-2-Peer-Feedback.png"/></a><figcaption>Feedback received</figcaption></figure>
-<figure><a href="evidence/machine-learning/collaborative-discussion-2/screenshots/Discussion-2-Summary-Post.png" rel="noopener" target="_blank"><img alt="Collaborative Discussion 2 — Summary post" src="evidence/machine-learning/collaborative-discussion-2/screenshots/Discussion-2-Summary-Post.png"/></a><figcaption>Summary post</figcaption></figure>
-</div><p><a href="#top">Back to contents</a></p></section>
-<hr/>
-<section id="unit-8">
-<header class="major"><h2>10. Unit 8: Gradient Descent</h2></header>
-<span class="section-label">How Models Learn from Error</span>
-<p>I used the Unit 8 gradient descent notebook to investigate how the number of iterations and the learning rate affect the cost of fitting a straight line to five data points. I started with the supplied settings (100 iterations, learning rate 0.08) and made two controlled modifications: 20 iterations at the original learning rate, and 100 iterations with learning rate 0.04.</p>
-<p>The final printed cost increased from approximately <strong>0.00412</strong> in the original run to <strong>1.52331</strong> with fewer iterations and <strong>0.06338</strong> with the smaller learning rate. This helped me understand that the algorithm needs an appropriate step size and enough updates to reduce error. I also recognised that this simple five-point dataset is useful for demonstrating the method but does not capture challenges such as noisy data or generalisation to unseen observations.</p>
-<p><strong>Learning outcome addressed:</strong> Understanding the applicability and challenges associated with different datasets for machine learning algorithms.</p>
-<h3>Supporting Evidence</h3>
-<div class="evidence-grid">
-<div class="evidence-card"><h4>Completed Activity</h4><p>Three gradient descent experiments, controlled parameter changes and comparison of final costs.</p><a href="evidence/machine-learning/unit-activities/unit-8-gradient-descent/completed-activity.md">View completed activity</a></div>
-<div class="evidence-card"><h4>Activity Reflection</h4><p>What? So What? Now What? — understanding iteration count, learning rate and dataset limitations.</p><a href="evidence/machine-learning/unit-activities/unit-8-gradient-descent/reflection.md">View reflection</a></div>
-</div>
-<h3>Selected Screenshots</h3>
-<div class="screenshot-gallery">
-<figure><a href="evidence/machine-learning/unit-activities/unit-8-gradient-descent/screenshots/ex4-gradient-original.png" rel="noopener" target="_blank"><img alt="Original gradient descent with 100 iterations and learning rate 0.08" src="evidence/machine-learning/unit-activities/unit-8-gradient-descent/screenshots/ex4-gradient-original.png"/></a><figcaption>Original — 100 iterations, learning rate 0.08</figcaption></figure>
-<figure><a href="evidence/machine-learning/unit-activities/unit-8-gradient-descent/screenshots/ex4-gradient-iterations-20.png" rel="noopener" target="_blank"><img alt="Gradient descent using 20 iterations" src="evidence/machine-learning/unit-activities/unit-8-gradient-descent/screenshots/ex4-gradient-iterations-20.png"/></a><figcaption>Modified 1 — 20 iterations</figcaption></figure>
-<figure><a href="evidence/machine-learning/unit-activities/unit-8-gradient-descent/screenshots/ex4-gradient-learning-rate-004.png" rel="noopener" target="_blank"><img alt="Gradient descent using learning rate 0.04" src="evidence/machine-learning/unit-activities/unit-8-gradient-descent/screenshots/ex4-gradient-learning-rate-004.png"/></a><figcaption>Modified 2 — learning rate 0.04</figcaption></figure>
-</div>
-<p><a href="#top">Back to contents</a></p>
-</section>
-<hr/>
-<section id="unit-9">
-<header class="major"><h2>11. Unit 9: Convolutional Neural Networks</h2></header>
-<span class="section-label">CIFAR-10 Object Recognition — Prediction Results and Responsible AI</span>
-<p>For this activity, I ran the supplied convolutional neural network (CNN) notebook using the CIFAR-10 image dataset. I examined the image-preparation, convolution, pooling, training and evaluation sections, then changed the image selected for prediction from <code>x_test[16]</code> to <code>x_test[5]</code> and <code>x_test[12]</code>. I used the same trained model for all three predictions.</p>
-<p>The CNN achieved <strong>62.42% test accuracy</strong> in the notebook's evaluation. The training-loss plot shows training loss continuing to decrease while validation loss begins to increase after its lowest point, suggesting possible overfitting. The three individual predictions were correct, but this does not mean the model performs perfectly across the test dataset.</p>
-<h3>Original and Modified Prediction Results</h3>
-<div class="table-wrapper"><table><thead><tr><th>Test image</th><th>Actual label</th><th>CNN prediction</th><th>Result</th></tr></thead><tbody>
-<tr><td><code>x_test[16]</code> (original)</td><td>5 — Dog</td><td>5 — Dog</td><td>Correct</td></tr>
-<tr><td><code>x_test[5]</code> (modified)</td><td>6 — Frog</td><td>6 — Frog</td><td>Correct</td></tr>
-<tr><td><code>x_test[12]</code> (modified)</td><td>5 — Dog</td><td>5 — Dog</td><td>Correct</td></tr>
-</tbody></table></div>
-<p>All three chosen images were classified correctly. However, CIFAR-10 images are only 32 × 32 pixels, and details are not always clear. This exercise helped me understand why dataset limitations, overall test metrics and class-specific errors matter beyond a few successful predictions.</p>
-<p>In connection with <strong>Wall (2019)</strong>, I also considered the ethical consequences of errors in computer vision. Misclassifying a classroom image is different from incorrectly identifying a person using facial recognition. Dataset bias, privacy, human oversight and accountability are therefore important alongside model accuracy.</p>
-<p><strong>Learning outcomes addressed:</strong> understanding dataset applicability and limitations; articulating social, ethical, legal and professional concerns arising from machine-learning applications.</p>
-<h3>Supporting Evidence</h3>
-<div class="evidence-grid">
-<div class="evidence-card"><h4>Completed Activity</h4><p>Actual training observations, 62.42% test accuracy and comparison of three image predictions.</p><a href="evidence/machine-learning/unit-activities/unit-9-cnn/completed-activity.md">View completed activity</a></div>
-<div class="evidence-card"><h4>Activity Reflection</h4><p>What? So What? Now What? — CNN predictions, limitations and facial-recognition ethics from Wall (2019).</p><a href="evidence/machine-learning/unit-activities/unit-9-cnn/reflection.md">View learning reflection</a></div>
-<div class="evidence-card"><h4>Executed Notebook</h4><p>Python code and experiment outputs for CIFAR-10 CNN training and classification.</p><a href="evidence/machine-learning/unit-activities/unit-9-cnn/Unit09%20Ex1%20Convolutional%20Neural%20Networks%20%28CNN%29%20-%20Object%20Recognition%20%281%29.ipynb">Open Jupyter notebook</a></div>
-</div>
-<h3>Selected Activity Screenshots</h3>
-<div class="screenshot-gallery">
-<figure><a href="evidence/machine-learning/unit-activities/unit-9-cnn/screenshots/ex1-cnn-training-loss.png" rel="noopener" target="_blank"><img alt="CNN training loss and validation loss over six epochs" loading="lazy" src="evidence/machine-learning/unit-activities/unit-9-cnn/screenshots/ex1-cnn-training-loss.png"/></a><figcaption>Training loss vs validation loss — validation loss rises in later epochs.</figcaption></figure>
-<figure><a href="evidence/machine-learning/unit-activities/unit-9-cnn/screenshots/ex1-cnn-original-16.png" rel="noopener" target="_blank"><img alt="Image 16 actual dog predicted dog" loading="lazy" src="evidence/machine-learning/unit-activities/unit-9-cnn/screenshots/ex1-cnn-original-16.png"/></a><figcaption>Original image 16 — dog, correctly predicted.</figcaption></figure>
-<figure><a href="evidence/machine-learning/unit-activities/unit-9-cnn/screenshots/ex1-cnn-modified-5.png" rel="noopener" target="_blank"><img alt="Image 5 actual frog predicted frog" loading="lazy" src="evidence/machine-learning/unit-activities/unit-9-cnn/screenshots/ex1-cnn-modified-5.png"/></a><figcaption>Modified image 5 — frog, correctly predicted.</figcaption></figure>
-<figure><a href="evidence/machine-learning/unit-activities/unit-9-cnn/screenshots/ex1-cnn-modified-12.png" rel="noopener" target="_blank"><img alt="Image 12 actual dog predicted dog" loading="lazy" src="evidence/machine-learning/unit-activities/unit-9-cnn/screenshots/ex1-cnn-modified-12.png"/></a><figcaption>Modified image 12 — dog, correctly predicted.</figcaption></figure>
-</div>
-<p><a href="#top">Back to contents</a></p>
-</section>
-<hr/>
-<section id="fashion-mnist"><header class="major"><h2>12. Unit 11: Fashion-MNIST Project and Model Evaluation</h2></header>
-<span class="section-label">Individual Project — Comparing Classical Machine Learning and Deep Learning</span>
-<h3>Project Overview and Research Question</h3>
-<p>For my individual assessment, I investigated whether a convolutional neural network (CNN) could recognise clothing images more accurately than a Logistic Regression baseline. The question was relevant to a possible online retail application, where incorrect categorisation could affect product discovery. I also wanted to understand what the models got wrong and whether a more complicated model was justified by its results.</p>
-<h3>Dataset, Preparation and Model Design</h3>
-<p>Fashion-MNIST contains 70,000 labelled grayscale images (28 × 28 pixels) in ten clothing categories. I used 48,000 images for training, 12,000 for validation and a separate 10,000-image test set. I scaled pixel values to 0–1, flattened each image into 784 values for Logistic Regression and kept the image shape for the CNN. The CNN used convolution, pooling and dense layers; early stopping monitored validation loss.</p>
-<h3>Testing and Model Comparison</h3>
-<div class="table-wrapper"><table><thead><tr><th>Held-out test evaluation</th><th>Logistic Regression</th><th>CNN</th></tr></thead><tbody><tr><td>Accuracy</td><td>84.25%</td><td>89.77%</td></tr><tr><td>Main observation</td><td>Useful simpler baseline; convergence warning at 200 iterations</td><td>5.52 percentage points higher test accuracy</td></tr></tbody></table></div>
-<p>The CNN performed better overall, but this did not mean it classified every category equally well. In the CNN test results, <strong>shirt recall was 75.8%</strong>, while <strong>sneaker recall was 98.6%</strong>. My learning curves show training accuracy continuing to rise while validation accuracy began to level off, suggesting mild overfitting towards the end of training.</p>
-<h3>Explainability and Errors</h3>
-<p>I also used Grad-CAM to inspect image regions associated with predictions. A correctly identified ankle boot was one example; another example showed a <strong>coat wrongly predicted as a shirt</strong>. The heatmap was useful as an approximate visual aid, but it did not provide a full explanation of the error. This reinforced the need to assess both performance and limits of interpretation.</p>
-<h3>Limitations and Responsible Deployment</h3>
-<p>This was one benchmark comparison with a single hold-out split, not a validation across real retail images. Fashion-MNIST does not include demographic attributes, so category-level differences cannot establish demographic fairness. I would recommend a small human-reviewed pilot, additional testing with real product photographs and continued monitoring before considering an operational system.</p>
-<h3>Critical Reflection — What? So What? Now What?</h3>
-<p><strong>What?</strong> I built and compared two image classifiers and examined their held-out test performance. <strong>So What?</strong> I learned that a higher accuracy score is only a starting point: class-level recall, validation trends and specific mistakes matter. <strong>Now What?</strong> I would test more diverse images, investigate the difficult clothing categories and use human review when predictions are uncertain.</p>
-<p><strong>Learning outcomes addressed:</strong> LO1, LO2 and LO3.</p>
-<h3>Supporting Evidence</h3><div class="evidence-grid">
-<div class="evidence-card"><h4>Individual Presentation</h4><p>Submitted presentation comparing the two classifiers, evaluation and ethical considerations.</p><a href="evidence/machine-learning/fashion-mnist/Fashion_MNIST_Individual_Presentation.pptx">View presentation</a></div>
-<div class="evidence-card"><h4>Implementation and Outputs</h4><p>Executed notebook and readable HTML export, including training, model evaluation and Grad-CAM.</p><a href="evidence/machine-learning/fashion-mnist/01_ml_vs_dl_comparison.html">View notebook output</a><p><a href="evidence/machine-learning/fashion-mnist/01_ml_vs_dl_comparison.ipynb">View source notebook</a></p></div>
-<div class="evidence-card"><h4>Project Summary</h4><p>Research question, dataset, model design, numerical results and practical limitations.</p><a href="evidence/machine-learning/fashion-mnist/project-summary.md">View project summary</a></div>
-<div class="evidence-card"><h4>Critical Reflection</h4><p>What? So What? Now What? reflection on model comparison, errors and responsible use.</p><a href="evidence/machine-learning/fashion-mnist/critical-reflection.md">View reflection</a></div>
-</div>
-<h3>Implementation Screenshots</h3><div class="screenshot-gallery">
-<figure><img alt="CNN training and validation accuracy by epoch" src="evidence/machine-learning/fashion-mnist/screenshots/cnn_accuracy_curve.png"/><figcaption>Training and validation accuracy — mild late gap</figcaption></figure>
-<figure><img alt="CNN training and validation loss by epoch" src="evidence/machine-learning/fashion-mnist/screenshots/cnn_loss_curve.png"/><figcaption>Training and validation loss</figcaption></figure>
-<figure><img alt="CNN per-category recall for Fashion-MNIST" src="evidence/machine-learning/fashion-mnist/screenshots/cnn_category_recall.png"/><figcaption>Category recall — shirts remain challenging</figcaption></figure>
-<figure><img alt="Coat classified as shirt with Grad-CAM heatmap" src="evidence/machine-learning/fashion-mnist/screenshots/cnn_gradcam_incorrect.png"/><figcaption>Incorrect coat-to-shirt classification — Grad-CAM example</figcaption></figure>
-</div>
-<hr/>
-<h3>Unit 11 e-Portfolio Activity: Model Performance Measurement</h3>
-<span class="section-label">Model Selection and Evaluation</span>
-<p>Alongside my separate Fashion-MNIST assessment, I worked through the model performance measurement notebook to understand how evaluation metrics respond to changes in inputs and settings. The notebook covers both classification and regression measures.</p>
-<p>In the multiclass Iris example, changing <code>test_size</code> from 0.5 to 0.3 raised the micro-average ROC-AUC from 0.7277 to 0.7583, although two individual class scores decreased slightly. For the regression example, changing predicted values increased MAE from 0.50 to 0.65 and reduced R² from 0.9486 to 0.9226. These were small learning experiments, not evidence of general improvement across unseen datasets.</p>
-<h4>My Learning</h4>
-<p>I learned that overall performance can hide differences between classes and that regression and classification require different measures. It is important to explain the evaluation setup and its limitations before presenting a model as reliable.</p>
-<h4>Supporting Evidence</h4>
-<div class="evidence-grid">
-<div class="evidence-card">
-<h4>Completed Activity</h4>
-<p>My ROC-AUC, MAE and R² experiments, including parameter changes, results and interpretation.</p>
-<a href="evidence/machine-learning/unit-activities/unit-11-model-performance/completed-activity.md">View completed activity</a>
-</div>
-<div class="evidence-card">
-<h4>Learning Reflection</h4>
-<p>What? So What? Now What? reflection on metric choice, class-level results and responsible reporting.</p>
-<a href="evidence/machine-learning/unit-activities/unit-11-model-performance/reflection.md">View reflection</a>
-</div>
-<div class="evidence-card">
-<h4>Executed Notebook</h4>
-<p>Original exercise notebook with the recorded experiments and calculations.</p>
-<a href="evidence/machine-learning/unit-activities/unit-11-model-performance/Unit11_model_Performance_Measurement.ipynb">View Jupyter notebook</a>
-</div>
-</div>
-<p><strong>Learning outcome addressed:</strong> LO1 — consideration of responsible and transparent model evaluation and reporting.</p>
-<p><a href="#top">Back to contents</a></p>
-</section>
-<hr/>
-<section id="professional-development">
-<header class="major"><h2>13. Team Meetings, Feedback and Professional Development</h2></header>
-<h3>Team Meetings and Contribution</h3><p>The Group D project involved coordinating tasks in a virtual team and combining separate analyses into a single report. My responsibilities centred on data understanding and EDA, with attention to communicating what the charts and summary results meant.</p><p><strong>Saved teamwork evidence:</strong> Our Group D <a href="evidence/machine-learning/group-d-airbnb/trello-team-board.pdf">Trello export</a> shows task allocation and project resources. Meeting dates and minutes have not yet been independently verified from the linked notes.</p><h3>Feedback and Response</h3><p>I will summarise documented peer and tutor feedback alongside the improvements it prompted. Feedback should be attributed carefully and any confidential peer-evaluation details anonymised.</p><h3>Professional Skills Matrix and Action Plan</h3><div class="table-wrapper"><table><thead><tr><th>Skill</th><th>Evidence</th><th>Development action</th></tr></thead><tbody><tr><td>Data understanding</td><td>Group D EDA and Unit 5 calculations</td><td>Practise distinguishing data types and checking assumptions.</td></tr><tr><td>Model evaluation</td><td>Airbnb regression and Fashion-MNIST comparison</td><td>Interpret MAE, R², accuracy and per-class measures together.</td></tr><tr><td>Team communication</td><td>Group D coordination and report review</td><td>Keep clear action notes and communicate findings sooner.</td></tr><tr><td>Ethical awareness</td><td>Two collaborative discussions</td><td>Check data privacy, bias, explanation and oversight.</td></tr><tr><td>Technical confidence</td><td>Python notebooks and presentation work</td><td>Reproduce results independently and retain run evidence.</td></tr></tbody></table></div>
-<p><a href="#top">Back to contents</a></p>
-</section>
-<hr/>
-<section id="final-reflection">
-<header class="major"><h2>14. Final Reflective Piece</h2></header>
-<div class="portfolio-note"><strong>Draft for review:</strong> This reflective piece is presented for your personal verification against the final assessment instructions and supporting evidence before submission.</div><p><strong>Reflective framework:</strong> What? So What? Now What? (Rolfe, Freshwater and Jasper, 2001).</p>
-<h3>What?</h3>
-<p>I entered the Machine Learning module with practical experience of computer networks and automation but less confidence in statistical and machine learning concepts. Over the module I studied how data is represented, how relationships are explored and how different models are selected and evaluated. The Jaccard activity provided a manageable introduction to distance measures: by changing the medical-test results into binary attributes, I could see why the choice of representation affects a calculation.</p>
-<p>The two assessed projects challenged me in different ways. In Group D's Airbnb analysis, my individual focus was EDA. I helped make the dataset more understandable and examined how summary values and charts supported the team's report. In my Fashion-MNIST presentation I moved to image classification and compared logistic regression with a CNN. The collaborative discussions added a wider perspective on the social effects of automation and the responsible use of AI-generated outputs.</p>
-<h3>So What?</h3>
-<p>The greatest change in my understanding was recognising that machine learning is not simply a matter of running an algorithm and reporting the final score. Before modelling, data quality, relevance and interpretation matter. The Airbnb data made this particularly clear: the average price was noticeably higher than the median, and the final price-prediction model explained only a limited proportion of variation. This made me cautious about presenting a prediction as though it were an exact valuation.</p>
-<p>I also learned that a higher accuracy score can conceal differences across categories. In Fashion-MNIST, the CNN improved overall accuracy over logistic regression, but shirts remained much harder to identify than sneakers. That observation made model evaluation more concrete for me. I began asking which cases the model handles poorly and whether those mistakes would matter in the intended application.</p>
-<p>Working in a virtual team reinforced the need to explain technical findings clearly. My EDA contribution was only one part of the final Airbnb report, but it required me to review charts, question interpretations and make sure that descriptions did not overstate what the data showed. I still need more practice reproducing notebook results independently and making technical decisions confidently within a deadline.</p>
-<p>The discussions also connected machine learning to professional responsibility. In a networking environment, automation can save time and improve monitoring, but an incorrect output or poorly governed system can have consequences. I now see human review, privacy and transparent limitations as part of technical quality, not separate topics added at the end.</p>
-<h3>Now What?</h3>
-<p>My next priority is to strengthen the fundamentals I found most difficult, particularly regression assumptions, optimisation, neural-network training and the interpretation of evaluation metrics. I want to practise with smaller datasets so I can explain each stage in my own words before using more complicated architectures.</p>
-<p>I also plan to carry these lessons into network engineering applications. For example, a model that flags unusual network behaviour should be assessed for missed incidents and false alerts, not only its aggregate accuracy. I would begin with reliable data collection, compare a simple baseline, document limitations and retain engineer oversight before recommending operational actions.</p>
-<p>Overall, this module increased my confidence in asking better questions about machine learning. I have not mastered every technique, but I am better able to recognise how the dataset, evaluation method, teamwork and ethical context shape whether a model is genuinely useful.</p>
-<p><a href="#top">Back to contents</a></p>
-</section>
-<hr/>
-<section id="mapping">
-<header class="major"><h2>15. Learning Outcome Mapping</h2></header>
-<div class="table-wrapper"><table><thead><tr><th>Evidence</th><th>LO1</th><th>LO2</th><th>LO3</th><th>LO4</th></tr></thead><tbody><tr><td>Discussion 1 — Industry 4.0</td><td>✓</td><td></td><td></td><td>✓</td></tr><tr><td>Unit 3 — Correlation/Regression</td><td></td><td>✓</td><td>✓</td><td></td></tr><tr><td>Unit 5 — Jaccard</td><td></td><td>✓</td><td></td><td></td></tr><tr><td>Group D — Airbnb</td><td></td><td>✓</td><td>✓</td><td>✓</td></tr><tr><td>Unit 7 — Perceptrons</td><td></td><td>✓</td><td>✓</td><td></td></tr><tr><td>Discussion 2 — ANN ethics</td><td>✓</td><td></td><td></td><td>✓</td></tr><tr><td>Unit 8 — Gradient Descent</td><td></td><td>✓</td><td>✓</td><td></td></tr><tr><td>Unit 9 — CNN</td><td></td><td>✓</td><td>✓</td><td></td></tr><tr><td>Fashion-MNIST</td><td>✓</td><td>✓</td><td>✓</td><td></td></tr><tr><td>Unit 11 — Model Performance Measurement</td><td>✓</td><td></td><td>✓</td><td></td></tr><tr><td>Final reflection</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr></tbody></table></div><p>Learning outcome mapping links completed practical evidence to relevant module outcomes; final portfolio evidence and reflections should be checked before submission.</p>
-<p><a href="#top">Back to contents</a></p>
-</section>
-<hr/>
-<section id="references">
-<header class="major"><h2>16. References</h2></header>
-<p>Hutson, M. (2021) ‘Robo-writers: the rise and risks of language-generating AI’, <em>Nature</em>, 591, pp. 22–25. doi: 10.1038/d41586-021-00530-0.</p><p>Metcalf, G.S. (2024) ‘An Introduction to Industry 5.0: History, Foundations, ...’ [Full bibliographic details to confirm against the Unit 1 reading list].</p><p>Rolfe, G., Freshwater, D. and Jasper, M. (2001) <em>Critical reflection in nursing and the helping professions: A user’s guide.</em> Basingstoke: Palgrave Macmillan.</p><p>University of Essex Online (2026) <em>Machine Learning: Unit 5 Jaccard Distance / Dissimilarity Calculations</em>. Module learning activity.</p><p class="status-placeholder"><strong>Evidence to add:</strong> Complete Harvard references for the discussions, datasets and assessed projects using sources actually consulted.</p>
-<p><a href="#top">Back to contents</a></p>
-<li>Wall, M. (2019) ‘Biased and wrong? Facial recognition tech in the dock’, BBC News. <a href="https://www.bbc.com/news/business-48842750">Article link</a></li></section>
-</div></section>
-</div>
-<footer id="footer">
-<div class="inner">
-<ul class="copyright">
-<li>© Vinod Jadhav</li>
-<li>Design: HTML5 UP</li>
-</ul>
-</div>
-</footer>
-</div>
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+                        <p><strong>Learning outcome addressed:</strong> LO2.</p>
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+                    <hr />
+                    <section id="team-project">
+                        <header class="major">
+                            <h2>7. Unit 6: Group D — Airbnb NYC Project</h2>
+                        </header>
+                        <span class="section-label">Market Segmentation and Price Prediction</span>
+                        <h3>Project Overview</h3>
+                        <p>Our Group D project explored market segments and listing prices in New York City using the
+                            <em>AB_NYC_2019</em> dataset of 48,895 listings and 16 variables. Regression helped evaluate
+                            whether available features could predict price; clustering helped identify groups of
+                            comparable listings. The central question was how to give hosts more useful pricing guidance
+                            than a single city-wide average.
+                        </p>
+                        <h3>My Individual Contribution — Data Understanding and EDA</h3>
+                        <p>My assigned work was data understanding and exploratory data analysis (EDA), as reflected in
+                            our Trello task board. I inspected missing values, unique listing IDs and unusual prices,
+                            then compared price distributions, room types and boroughs. I found that the mean price
+                            ($152.72) was considerably above the median ($106), so I used a 95th-percentile view to make
+                            the common price range easier to interpret. This was a visualisation choice, not removal of
+                            expensive listings from the dataset.</p>
+                        <p>I also recorded why location needed consideration during data preparation: borough median
+                            prices were different, while the detailed <code>neighbourhood</code> field contained 221
+                            categories. The two notebooks and my location decision note record these checks and
+                            observations.</p>
+                        <h3>Team Planning and Responsibilities</h3>
+                        <p>The group used Trello to organise tasks across EDA, clustering, price prediction,
+                            visualisation and final reporting. The exported board names EDA under my initials. It
+                            provides evidence of task allocation and shared coordination, although it is not a formal
+                            peer-evaluation record.</p>
+                        <h3>Selected Group Findings</h3>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Measure</th>
+                                        <th>Reported result</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Listings / variables</td>
+                                        <td>48,895 / 16</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mean / median price</td>
+                                        <td>$152.72 / $106</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Median entire-home / private-room / shared-room prices</td>
+                                        <td>$160 / $70 / $45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Manhattan / Brooklyn / Bronx median prices</td>
+                                        <td>$150 / $90 / $65</td>
+                                    </tr>
+                                    <tr>
+                                        <td>HGB test MAE / RMSE / R²</td>
+                                        <td>$59.38 / $205.05 / 0.146</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Market segments identified</td>
+                                        <td>9 (4 entire-home, 3 private-room, 2 shared-room)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>These are results from our <strong>collective report</strong>, not claims that I personally
+                            trained the regression and clustering models. Although Gradient Boosting compared well
+                            against the other tested approaches, the low R² showed substantial unexplained price
+                            variation. This limited how confidently a model could recommend an individual listing price.
+                        </p>
+                        <h3>Critical Reflection</h3>
+                        <h4>What?</h4>
+                        <p>I contributed raw-data checks, visual exploration and the interpretation of room-type and
+                            borough pricing patterns.</p>
+                        <h4>So What?</h4>
+                        <p>EDA taught me that data quality and presentation affect the next stages of a project.
+                            Comparing the mean with the median and showing both full and limited price views helped me
+                            avoid oversimplifying a skewed market. Teamwork also required explanations that other
+                            members could use without recreating all the analysis.</p>
+                        <h4>Now What?</h4>
+                        <p>For another group analysis, I would agree a shared data dictionary earlier, record cleaning
+                            and feature decisions centrally and share draft charts with clear captions before the final
+                            report stage.</p>
+                        <p><strong>Learning outcomes addressed:</strong> LO2, LO3 and LO4, through dataset evaluation,
+                            model-result interpretation and collaboration.</p>
+                        <h3>Supporting Evidence</h3>
+                        <div class="evidence-grid">
+                            <div class="evidence-card">
+                                <h4>Group D Final Report</h4>
+                                <p>Submitted group findings, segmentation, regression results and appendices.</p><a
+                                    href="evidence/machine-learning/group-d-airbnb/group-final-report.pdf">View final
+                                    report</a>
+                            </div>
+                            <div class="evidence-card">
+                                <h4>My EDA Contribution</h4>
+                                <p>Data quality checks, notebooks, six charts and the location decision note.</p><a
+                                    href="evidence/machine-learning/group-d-airbnb/my-eda-contribution.md">View EDA
+                                    evidence</a>
+                            </div>
+                            <div class="evidence-card">
+                                <h4>Project Summary</h4>
+                                <p>Business question, group methods, findings and limitations.</p><a
+                                    href="evidence/machine-learning/group-d-airbnb/group-project-summary.md">View
+                                    project summary</a>
+                            </div>
+                            <div class="evidence-card">
+                                <h4>Teamwork Reflection</h4>
+                                <p>Rolfe What? So What? Now What? reflection and Trello-based task allocation.</p><a
+                                    href="evidence/machine-learning/group-d-airbnb/teamwork-reflection.md">View teamwork
+                                    reflection</a>
+                            </div>
+                            <div class="evidence-card">
+                                <h4>Project Trello Board</h4>
+                                <p>Saved task allocation and shared coordination records.</p><a
+                                    href="evidence/machine-learning/group-d-airbnb/trello-team-board.pdf">View Trello
+                                    evidence</a>
+                            </div>
+                            <div class="evidence-card">
+                                <h4>My EDA Notebooks</h4>
+                                <p>Original analysis code for raw data and exploratory visualisations.</p><a
+                                    href="evidence/machine-learning/group-d-airbnb/notebooks/01_data_understanding.ipynb">Data
+                                    understanding</a> · <a
+                                    href="evidence/machine-learning/group-d-airbnb/notebooks/02_eda.ipynb">EDA</a>
+                            </div>
+                        </div>
+                        <h3>Selected EDA Screenshots</h3>
+                        <div class="screenshot-gallery">
+                            <figure><img alt="Full Airbnb price distribution showing skew and high-end outliers"
+                                    loading="lazy"
+                                    src="evidence/machine-learning/group-d-airbnb/screenshots/price_distribution_all.png" />
+                                <figcaption>Original price distribution — right-skewed data</figcaption>
+                            </figure>
+                            <figure><img alt="Airbnb prices limited to the 95th percentile for visualisation"
+                                    loading="lazy"
+                                    src="evidence/machine-learning/group-d-airbnb/screenshots/price_distribution_95pct.png" />
+                                <figcaption>95th-percentile price view</figcaption>
+                            </figure>
+                            <figure><img alt="Median Airbnb prices by room type" loading="lazy"
+                                    src="evidence/machine-learning/group-d-airbnb/screenshots/median_price_by_room_type.png" />
+                                <figcaption>Median price by room type</figcaption>
+                            </figure>
+                            <figure><img alt="Median Airbnb prices by borough" loading="lazy"
+                                    src="evidence/machine-learning/group-d-airbnb/screenshots/median_price_by_neighbourhood_group.png" />
+                                <figcaption>Median price by neighbourhood group</figcaption>
+                            </figure>
+                            <figure><img alt="Counts of Airbnb listings by room type" loading="lazy"
+                                    src="evidence/machine-learning/group-d-airbnb/screenshots/room_type_counts.png" />
+                                <figcaption>Listing counts by room type</figcaption>
+                            </figure>
+                            <figure><img alt="Counts of Airbnb listings by borough" loading="lazy"
+                                    src="evidence/machine-learning/group-d-airbnb/screenshots/neighbourhood_group_counts.png" />
+                                <figcaption>Listing counts by borough</figcaption>
+                            </figure>
+                        </div>
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+                    <hr />
+                    <section id="unit-7">
+                        <header class="major">
+                            <h2>8. Unit 7: Perceptron Activities</h2>
+                        </header>
+                        <span class="section-label">Foundations of Artificial Neural Networks</span>
+                        <p>I completed three notebook exercises to explore how perceptrons work. In the simple
+                            perceptron example, manually changing a weight switched the output from 1 to 0. In the AND
+                            exercise, the perceptron learned to classify the four logical input combinations. The
+                            multilayer example then demonstrated how hidden neurons and a sigmoid activation function
+                            can represent XOR, which cannot be learned by a single standard perceptron.</p>
+                        <p>Changing the AND learning rate from <code>0.1</code> to <code>0.2</code> resulted in
+                            different final weights (<code>[0.5, 0.5]</code> versus <code>[0.6, 0.6]</code>), while all
+                            four predictions remained correct. For the multilayer XOR notebook, I recorded the training
+                            error decreasing and the final correct outputs (<code>0, 1, 1, 0</code>). I did not carry
+                            out a separate epoch or learning-rate comparison for that example.</p>
+                        <p><strong>Learning outcomes addressed:</strong> LO2 and LO3, through understanding model
+                            behaviour, training choices and limitations.</p>
+                        <h3>Supporting Evidence</h3>
+                        <div class="evidence-grid">
+                            <div class="evidence-card">
+                                <h4>Completed Activity</h4>
+                                <p>Results from all three perceptron notebooks, including input weights, learning-rate
+                                    comparison and XOR predictions.</p>
+                                <a
+                                    href="evidence/machine-learning/unit-activities/unit-7-perceptron/completed-activity.md">View
+                                    completed activity</a>
+                            </div>
+                            <div class="evidence-card">
+                                <h4>Activity Reflection</h4>
+                                <p>What? So What? Now What? — how these experiments developed my understanding of neural
+                                    networks.</p>
+                                <a href="evidence/machine-learning/unit-activities/unit-7-perceptron/reflection.md">View
+                                    reflection</a>
+                            </div>
+                        </div>
+                        <h3>Selected Screenshots</h3>
+                        <div class="screenshot-gallery">
+                            <figure>
+                                <a href="evidence/machine-learning/unit-activities/unit-7-perceptron/screenshots/ex1-simple-modified.png"
+                                    rel="noopener" target="_blank"><img
+                                        alt="Simple perceptron modified weights and output"
+                                        src="evidence/machine-learning/unit-activities/unit-7-perceptron/screenshots/ex1-simple-modified.png" /></a>
+                                <figcaption>Exercise 1 — effect of changing weights</figcaption>
+                            </figure>
+                            <figure>
+                                <a href="evidence/machine-learning/unit-activities/unit-7-perceptron/screenshots/ex2-and-modified.png"
+                                    rel="noopener" target="_blank"><img
+                                        alt="AND perceptron verification after learning rate modification"
+                                        src="evidence/machine-learning/unit-activities/unit-7-perceptron/screenshots/ex2-and-modified.png" /></a>
+                                <figcaption>Exercise 2 — AND operator after training</figcaption>
+                            </figure>
+                            <figure>
+                                <a href="evidence/machine-learning/unit-activities/unit-7-perceptron/screenshots/ex3-multilayer-xor-results.png"
+                                    rel="noopener" target="_blank"><img
+                                        alt="Multilayer perceptron XOR prediction results"
+                                        src="evidence/machine-learning/unit-activities/unit-7-perceptron/screenshots/ex3-multilayer-xor-results.png" /></a>
+                                <figcaption>Exercise 3 — XOR predictions</figcaption>
+                            </figure>
+                        </div>
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+                    <hr />
+                    <section id="discussion-2">
+                        <header class="major">
+                            <h2>9. Units 8–10: Collaborative Discussion 2 — Legal and Ethical Views on ANN Applications
+                            </h2>
+                        </header>
+                        <span class="section-label">Robo-writers, accuracy, privacy and accountability</span>
+                        <p>My initial post considered Hutson (2021) and the benefits of AI-assisted writing for emails,
+                            meeting summaries and technical documentation. Drawing on my networking experience, I raised
+                            concerns about fluent but inaccurate incident reports, confidentiality and loss of human
+                            judgement.</p>
+                        <p>I responded to two classmates about appropriate levels of human review, creativity and the
+                            different expectations placed on AI and human decision-making. Their perspectives helped me
+                            move from focusing only on errors towards evaluating how serious the errors are, whether
+                            benefits justify the risks and what practical safeguards can be put in place.</p>
+                        <p>In feedback on my initial post, a classmate proposed grounding incident reports in approved
+                            logs and tickets, distinguishing confirmed from suspected causes, and measuring total
+                            drafting <em>and verification</em> effort. This later feedback made the link between ethical
+                            concerns and engineering practice more concrete. My summary post, submitted the previous
+                            day, already reflected a more balanced view of productivity, risk and human oversight.</p>
+                        <p><strong>Learning outcomes addressed:</strong> LO1 and LO4.</p>
+                        <h3>Supporting Evidence</h3>
+                        <div class="evidence-grid">
+                            <div class="evidence-card">
+                                <h4>Initial Post</h4>
+                                <p>Hutson (2021), AI writing benefits, technical-report accuracy, privacy and creative
+                                    work.</p><a
+                                    href="evidence/machine-learning/collaborative-discussion-2/initial-post.md">View
+                                    initial post</a>
+                            </div>
+                            <div class="evidence-card">
+                                <h4>My Peer Responses</h4>
+                                <p>Two replies on risk-based human review, algorithm aversion, privacy and creative
+                                    diversity.</p><a
+                                    href="evidence/machine-learning/collaborative-discussion-2/peer-responses.md">View
+                                    peer responses</a>
+                            </div>
+                            <div class="evidence-card">
+                                <h4>Feedback Received</h4>
+                                <p>Practical suggestions for source-grounded reporting, confidentiality and measuring
+                                    actual productivity.</p><a
+                                    href="evidence/machine-learning/collaborative-discussion-2/feedback-received.md">View
+                                    feedback received</a>
+                            </div>
+                            <div class="evidence-card">
+                                <h4>Summary Post</h4>
+                                <p>How discussion changed my view on useful but fallible AI writing tools.</p><a
+                                    href="evidence/machine-learning/collaborative-discussion-2/summary-post.md">View
+                                    summary post</a>
+                            </div>
+                        </div>
+                        <p><a href="evidence/machine-learning/collaborative-discussion-2/discussion-reflection.md">View
+                                short discussion reflection</a></p>
+                        <h3>Discussion Screenshots</h3>
+                        <div class="screenshot-gallery">
+                            <figure><a
+                                    href="evidence/machine-learning/collaborative-discussion-2/screenshots/Discussion-2_Initial-Post.png"
+                                    rel="noopener" target="_blank"><img alt="Collaborative Discussion 2 — Initial post"
+                                        src="evidence/machine-learning/collaborative-discussion-2/screenshots/Discussion-2_Initial-Post.png" /></a>
+                                <figcaption>Initial post</figcaption>
+                            </figure>
+                            <figure><a
+                                    href="evidence/machine-learning/collaborative-discussion-2/screenshots/Discussion-2-Peer-Response-1.png"
+                                    rel="noopener" target="_blank"><img
+                                        alt="Collaborative Discussion 2 — Peer response 1"
+                                        src="evidence/machine-learning/collaborative-discussion-2/screenshots/Discussion-2-Peer-Response-1.png" /></a>
+                                <figcaption>Peer response 1</figcaption>
+                            </figure>
+                            <figure><a
+                                    href="evidence/machine-learning/collaborative-discussion-2/screenshots/Discussion-2-Peer-Response-2.png"
+                                    rel="noopener" target="_blank"><img
+                                        alt="Collaborative Discussion 2 — Peer response 2"
+                                        src="evidence/machine-learning/collaborative-discussion-2/screenshots/Discussion-2-Peer-Response-2.png" /></a>
+                                <figcaption>Peer response 2</figcaption>
+                            </figure>
+                            <figure><a
+                                    href="evidence/machine-learning/collaborative-discussion-2/screenshots/Discussion-2-Peer-Feedback.png"
+                                    rel="noopener" target="_blank"><img
+                                        alt="Collaborative Discussion 2 — Feedback received"
+                                        src="evidence/machine-learning/collaborative-discussion-2/screenshots/Discussion-2-Peer-Feedback.png" /></a>
+                                <figcaption>Feedback received</figcaption>
+                            </figure>
+                            <figure><a
+                                    href="evidence/machine-learning/collaborative-discussion-2/screenshots/Discussion-2-Summary-Post.png"
+                                    rel="noopener" target="_blank"><img alt="Collaborative Discussion 2 — Summary post"
+                                        src="evidence/machine-learning/collaborative-discussion-2/screenshots/Discussion-2-Summary-Post.png" /></a>
+                                <figcaption>Summary post</figcaption>
+                            </figure>
+                        </div>
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+                    <hr />
+                    <section id="unit-8">
+                        <header class="major">
+                            <h2>10. Unit 8: Gradient Descent</h2>
+                        </header>
+                        <span class="section-label">How Models Learn from Error</span>
+                        <p>I used the Unit 8 gradient descent notebook to investigate how the number of iterations and
+                            the learning rate affect the cost of fitting a straight line to five data points. I started
+                            with the supplied settings (100 iterations, learning rate 0.08) and made two controlled
+                            modifications: 20 iterations at the original learning rate, and 100 iterations with learning
+                            rate 0.04.</p>
+                        <p>The final printed cost increased from approximately <strong>0.00412</strong> in the original
+                            run to <strong>1.52331</strong> with fewer iterations and <strong>0.06338</strong> with the
+                            smaller learning rate. This helped me understand that the algorithm needs an appropriate
+                            step size and enough updates to reduce error. I also recognised that this simple five-point
+                            dataset is useful for demonstrating the method but does not capture challenges such as noisy
+                            data or generalisation to unseen observations.</p>
+                        <p><strong>Learning outcome addressed:</strong> Understanding the applicability and challenges
+                            associated with different datasets for machine learning algorithms.</p>
+                        <h3>Supporting Evidence</h3>
+                        <div class="evidence-grid">
+                            <div class="evidence-card">
+                                <h4>Completed Activity</h4>
+                                <p>Three gradient descent experiments, controlled parameter changes and comparison of
+                                    final costs.</p><a
+                                    href="evidence/machine-learning/unit-activities/unit-8-gradient-descent/completed-activity.md">View
+                                    completed activity</a>
+                            </div>
+                            <div class="evidence-card">
+                                <h4>Activity Reflection</h4>
+                                <p>What? So What? Now What? — understanding iteration count, learning rate and dataset
+                                    limitations.</p><a
+                                    href="evidence/machine-learning/unit-activities/unit-8-gradient-descent/reflection.md">View
+                                    reflection</a>
+                            </div>
+                        </div>
+                        <h3>Selected Screenshots</h3>
+                        <div class="screenshot-gallery">
+                            <figure><a
+                                    href="evidence/machine-learning/unit-activities/unit-8-gradient-descent/screenshots/ex4-gradient-original.png"
+                                    rel="noopener" target="_blank"><img
+                                        alt="Original gradient descent with 100 iterations and learning rate 0.08"
+                                        src="evidence/machine-learning/unit-activities/unit-8-gradient-descent/screenshots/ex4-gradient-original.png" /></a>
+                                <figcaption>Original — 100 iterations, learning rate 0.08</figcaption>
+                            </figure>
+                            <figure><a
+                                    href="evidence/machine-learning/unit-activities/unit-8-gradient-descent/screenshots/ex4-gradient-iterations-20.png"
+                                    rel="noopener" target="_blank"><img alt="Gradient descent using 20 iterations"
+                                        src="evidence/machine-learning/unit-activities/unit-8-gradient-descent/screenshots/ex4-gradient-iterations-20.png" /></a>
+                                <figcaption>Modified 1 — 20 iterations</figcaption>
+                            </figure>
+                            <figure><a
+                                    href="evidence/machine-learning/unit-activities/unit-8-gradient-descent/screenshots/ex4-gradient-learning-rate-004.png"
+                                    rel="noopener" target="_blank"><img alt="Gradient descent using learning rate 0.04"
+                                        src="evidence/machine-learning/unit-activities/unit-8-gradient-descent/screenshots/ex4-gradient-learning-rate-004.png" /></a>
+                                <figcaption>Modified 2 — learning rate 0.04</figcaption>
+                            </figure>
+                        </div>
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+                    <hr />
+                    <section id="unit-9">
+                        <header class="major">
+                            <h2>11. Unit 9: Convolutional Neural Networks</h2>
+                        </header>
+                        <span class="section-label">CIFAR-10 Object Recognition — Prediction Results and Responsible
+                            AI</span>
+                        <p>For this activity, I ran the supplied convolutional neural network (CNN) notebook using the
+                            CIFAR-10 image dataset. I examined the image-preparation, convolution, pooling, training and
+                            evaluation sections, then changed the image selected for prediction from
+                            <code>x_test[16]</code> to <code>x_test[5]</code> and <code>x_test[12]</code>. I used the
+                            same trained model for all three predictions.
+                        </p>
+                        <p>The CNN achieved <strong>62.42% test accuracy</strong> in the notebook's evaluation. The
+                            training-loss plot shows training loss continuing to decrease while validation loss begins
+                            to increase after its lowest point, suggesting possible overfitting. The three individual
+                            predictions were correct, but this does not mean the model performs perfectly across the
+                            test dataset.</p>
+                        <h3>Original and Modified Prediction Results</h3>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Test image</th>
+                                        <th>Actual label</th>
+                                        <th>CNN prediction</th>
+                                        <th>Result</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>x_test[16]</code> (original)</td>
+                                        <td>5 — Dog</td>
+                                        <td>5 — Dog</td>
+                                        <td>Correct</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>x_test[5]</code> (modified)</td>
+                                        <td>6 — Frog</td>
+                                        <td>6 — Frog</td>
+                                        <td>Correct</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>x_test[12]</code> (modified)</td>
+                                        <td>5 — Dog</td>
+                                        <td>5 — Dog</td>
+                                        <td>Correct</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>All three chosen images were classified correctly. However, CIFAR-10 images are only 32 × 32
+                            pixels, and details are not always clear. This exercise helped me understand why dataset
+                            limitations, overall test metrics and class-specific errors matter beyond a few successful
+                            predictions.</p>
+                        <p>In connection with <strong>Wall (2019)</strong>, I also considered the ethical consequences
+                            of errors in computer vision. Misclassifying a classroom image is different from incorrectly
+                            identifying a person using facial recognition. Dataset bias, privacy, human oversight and
+                            accountability are therefore important alongside model accuracy.</p>
+                        <p><strong>Learning outcomes addressed:</strong> understanding dataset applicability and
+                            limitations; articulating social, ethical, legal and professional concerns arising from
+                            machine-learning applications.</p>
+                        <h3>Supporting Evidence</h3>
+                        <div class="evidence-grid">
+                            <div class="evidence-card">
+                                <h4>Completed Activity</h4>
+                                <p>Actual training observations, 62.42% test accuracy and comparison of three image
+                                    predictions.</p><a
+                                    href="evidence/machine-learning/unit-activities/unit-9-cnn/completed-activity.md">View
+                                    completed activity</a>
+                            </div>
+                            <div class="evidence-card">
+                                <h4>Activity Reflection</h4>
+                                <p>What? So What? Now What? — CNN predictions, limitations and facial-recognition ethics
+                                    from Wall (2019).</p><a
+                                    href="evidence/machine-learning/unit-activities/unit-9-cnn/reflection.md">View
+                                    learning reflection</a>
+                            </div>
+                            <div class="evidence-card">
+                                <h4>Executed Notebook</h4>
+                                <p>Python code and experiment outputs for CIFAR-10 CNN training and classification.</p>
+                                <a
+                                    href="evidence/machine-learning/unit-activities/unit-9-cnn/Unit09%20Ex1%20Convolutional%20Neural%20Networks%20%28CNN%29%20-%20Object%20Recognition%20%281%29.ipynb">Open
+                                    Jupyter notebook</a>
+                            </div>
+                        </div>
+                        <h3>Selected Activity Screenshots</h3>
+                        <div class="screenshot-gallery">
+                            <figure><a
+                                    href="evidence/machine-learning/unit-activities/unit-9-cnn/screenshots/ex1-cnn-training-loss.png"
+                                    rel="noopener" target="_blank"><img
+                                        alt="CNN training loss and validation loss over six epochs" loading="lazy"
+                                        src="evidence/machine-learning/unit-activities/unit-9-cnn/screenshots/ex1-cnn-training-loss.png" /></a>
+                                <figcaption>Training loss vs validation loss — validation loss rises in later epochs.
+                                </figcaption>
+                            </figure>
+                            <figure><a
+                                    href="evidence/machine-learning/unit-activities/unit-9-cnn/screenshots/ex1-cnn-original-16.png"
+                                    rel="noopener" target="_blank"><img alt="Image 16 actual dog predicted dog"
+                                        loading="lazy"
+                                        src="evidence/machine-learning/unit-activities/unit-9-cnn/screenshots/ex1-cnn-original-16.png" /></a>
+                                <figcaption>Original image 16 — dog, correctly predicted.</figcaption>
+                            </figure>
+                            <figure><a
+                                    href="evidence/machine-learning/unit-activities/unit-9-cnn/screenshots/ex1-cnn-modified-5.png"
+                                    rel="noopener" target="_blank"><img alt="Image 5 actual frog predicted frog"
+                                        loading="lazy"
+                                        src="evidence/machine-learning/unit-activities/unit-9-cnn/screenshots/ex1-cnn-modified-5.png" /></a>
+                                <figcaption>Modified image 5 — frog, correctly predicted.</figcaption>
+                            </figure>
+                            <figure><a
+                                    href="evidence/machine-learning/unit-activities/unit-9-cnn/screenshots/ex1-cnn-modified-12.png"
+                                    rel="noopener" target="_blank"><img alt="Image 12 actual dog predicted dog"
+                                        loading="lazy"
+                                        src="evidence/machine-learning/unit-activities/unit-9-cnn/screenshots/ex1-cnn-modified-12.png" /></a>
+                                <figcaption>Modified image 12 — dog, correctly predicted.</figcaption>
+                            </figure>
+                        </div>
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+                    <hr />
+                    <section id="fashion-mnist">
+                        <header class="major">
+                            <h2>12. Unit 11: Fashion-MNIST Project and Model Evaluation</h2>
+                        </header>
+                        <span class="section-label">Individual Project — Comparing Classical Machine Learning and Deep
+                            Learning</span>
+                        <h3>Project Overview and Research Question</h3>
+                        <p>For my individual assessment, I investigated whether a convolutional neural network (CNN)
+                            could recognise clothing images more accurately than a Logistic Regression baseline. The
+                            question was relevant to a possible online retail application, where incorrect
+                            categorisation could affect product discovery. I also wanted to understand what the models
+                            got wrong and whether a more complicated model was justified by its results.</p>
+                        <h3>Dataset, Preparation and Model Design</h3>
+                        <p>Fashion-MNIST contains 70,000 labelled grayscale images (28 × 28 pixels) in ten clothing
+                            categories. I used 48,000 images for training, 12,000 for validation and a separate
+                            10,000-image test set. I scaled pixel values to 0–1, flattened each image into 784 values
+                            for Logistic Regression and kept the image shape for the CNN. The CNN used convolution,
+                            pooling and dense layers; early stopping monitored validation loss.</p>
+                        <h3>Testing and Model Comparison</h3>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Held-out test evaluation</th>
+                                        <th>Logistic Regression</th>
+                                        <th>CNN</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Accuracy</td>
+                                        <td>84.25%</td>
+                                        <td>89.77%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Main observation</td>
+                                        <td>Useful simpler baseline; convergence warning at 200 iterations</td>
+                                        <td>5.52 percentage points higher test accuracy</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The CNN performed better overall, but this did not mean it classified every category equally
+                            well. In the CNN test results, <strong>shirt recall was 75.8%</strong>, while
+                            <strong>sneaker recall was 98.6%</strong>. My learning curves show training accuracy
+                            continuing to rise while validation accuracy began to level off, suggesting mild overfitting
+                            towards the end of training.
+                        </p>
+                        <h3>Explainability and Errors</h3>
+                        <p>I also used Grad-CAM to inspect image regions associated with predictions. A correctly
+                            identified ankle boot was one example; another example showed a <strong>coat wrongly
+                                predicted as a shirt</strong>. The heatmap was useful as an approximate visual aid, but
+                            it did not provide a full explanation of the error. This reinforced the need to assess both
+                            performance and limits of interpretation.</p>
+                        <h3>Limitations and Responsible Deployment</h3>
+                        <p>This was one benchmark comparison with a single hold-out split, not a validation across real
+                            retail images. Fashion-MNIST does not include demographic attributes, so category-level
+                            differences cannot establish demographic fairness. I would recommend a small human-reviewed
+                            pilot, additional testing with real product photographs and continued monitoring before
+                            considering an operational system.</p>
+                        <h3>Critical Reflection — What? So What? Now What?</h3>
+                        <p><strong>What?</strong> I built and compared two image classifiers and examined their held-out
+                            test performance. <strong>So What?</strong> I learned that a higher accuracy score is only a
+                            starting point: class-level recall, validation trends and specific mistakes matter.
+                            <strong>Now What?</strong> I would test more diverse images, investigate the difficult
+                            clothing categories and use human review when predictions are uncertain.
+                        </p>
+                        <p><strong>Learning outcomes addressed:</strong> LO1, LO2 and LO3.</p>
+                        <p><strong>Project files: </strong><a
+                                href="evidence/machine-learning/fashion-mnist/Fashion_MNIST_Individual_Presentation.pptx">Presentation</a>
+                            | <a href="evidence/machine-learning/fashion-mnist/01_ml_vs_dl_comparison.html">Executed
+                                notebook</a> | <a
+                                href="evidence/machine-learning/fashion-mnist/01_ml_vs_dl_comparison.ipynb">Source
+                                notebook</a> | <a
+                                href="evidence/machine-learning/fashion-mnist/project-summary.md">Project summary</a> |
+                            <a href="evidence/machine-learning/fashion-mnist/critical-reflection.md">Critical
+                                reflection</a>
+                        </p>
+                        <h3>Implementation Screenshots</h3>
+                        <div class="screenshot-gallery">
+                            <figure><img alt="CNN training and validation accuracy by epoch"
+                                    src="evidence/machine-learning/fashion-mnist/screenshots/cnn_accuracy_curve.png" />
+                                <figcaption>Training and validation accuracy — mild late gap</figcaption>
+                            </figure>
+                            <figure><img alt="CNN training and validation loss by epoch"
+                                    src="evidence/machine-learning/fashion-mnist/screenshots/cnn_loss_curve.png" />
+                                <figcaption>Training and validation loss</figcaption>
+                            </figure>
+                            <figure><img alt="CNN per-category recall for Fashion-MNIST"
+                                    src="evidence/machine-learning/fashion-mnist/screenshots/cnn_category_recall.png" />
+                                <figcaption>Category recall — shirts remain challenging</figcaption>
+                            </figure>
+                            <figure><img alt="Coat classified as shirt with Grad-CAM heatmap"
+                                    src="evidence/machine-learning/fashion-mnist/screenshots/cnn_gradcam_incorrect.png" />
+                                <figcaption>Incorrect coat-to-shirt classification — Grad-CAM example</figcaption>
+                            </figure>
+                        </div>
+                        <hr />
+                        <h3>Unit 11 e-Portfolio Activity: Model Performance Measurement</h3>
+                        <span class="section-label">Model Selection and Evaluation</span>
+                        <p>Alongside my separate Fashion-MNIST assessment, I worked through the model performance
+                            measurement notebook to understand how evaluation metrics respond to changes in inputs and
+                            settings. The notebook covers both classification and regression measures.</p>
+                        <p>In the multiclass Iris example, changing <code>test_size</code> from 0.5 to 0.3 raised the
+                            micro-average ROC-AUC from 0.7277 to 0.7583, although two individual class scores decreased
+                            slightly. For the regression example, changing predicted values increased MAE from 0.50 to
+                            0.65 and reduced R² from 0.9486 to 0.9226. These were small learning experiments, not
+                            evidence of general improvement across unseen datasets.</p>
+                        <h4>My Learning</h4>
+                        <p>I learned that overall performance can hide differences between classes and that regression
+                            and classification require different measures. It is important to explain the evaluation
+                            setup and its limitations before presenting a model as reliable.</p>
+                        <h4>Supporting Evidence</h4>
+                        <div class="evidence-grid">
+                            <div class="evidence-card">
+                                <h4>Completed Activity</h4>
+                                <p>My ROC-AUC, MAE and R² experiments, including parameter changes, results and
+                                    interpretation.</p>
+                                <a
+                                    href="evidence/machine-learning/unit-activities/unit-11-model-performance/completed-activity.md">View
+                                    completed activity</a>
+                            </div>
+                            <div class="evidence-card">
+                                <h4>Learning Reflection</h4>
+                                <p>What? So What? Now What? reflection on metric choice, class-level results and
+                                    responsible reporting.</p>
+                                <a
+                                    href="evidence/machine-learning/unit-activities/unit-11-model-performance/reflection.md">View
+                                    reflection</a>
+                            </div>
+                            <div class="evidence-card">
+                                <h4>Executed Notebook</h4>
+                                <p>Original exercise notebook with the recorded experiments and calculations.</p>
+                                <a
+                                    href="evidence/machine-learning/unit-activities/unit-11-model-performance/Unit11_model_Performance_Measurement.ipynb">View
+                                    Jupyter notebook</a>
+                            </div>
+                        </div>
+                        <p><strong>Learning outcome addressed:</strong> LO1 — consideration of responsible and
+                            transparent model evaluation and reporting.</p>
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+                    <hr />
+                    <section id="professional-development">
+                        <header class="major">
+                            <h2>13. Team Meetings, Feedback and Professional Development</h2>
+                        </header>
+                        <h3>Team Meetings and Contribution</h3>
+                        <p>The Group D project involved coordinating tasks in a virtual team and combining separate
+                            analyses into a single report. My responsibilities centred on data understanding and EDA,
+                            with attention to communicating what the charts and summary results meant.</p>
+                        <p><strong>Saved teamwork evidence:</strong> Our Group D <a
+                                href="evidence/machine-learning/group-d-airbnb/trello-team-board.pdf">Trello export</a>
+                            shows task allocation and project resources. Meeting dates and minutes have not yet been
+                            independently verified from the linked notes.</p>
+                        <h3>Feedback and Response</h3>
+                        <p>I will summarise documented peer and tutor feedback alongside the improvements it prompted.
+                            Feedback should be attributed carefully and any confidential peer-evaluation details
+                            anonymised.</p>
+                        <h3>Professional Skills Matrix and Action Plan</h3>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Skill</th>
+                                        <th>Evidence</th>
+                                        <th>Development action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Data understanding</td>
+                                        <td>Group D EDA and Unit 5 calculations</td>
+                                        <td>Practise distinguishing data types and checking assumptions.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Model evaluation</td>
+                                        <td>Airbnb regression and Fashion-MNIST comparison</td>
+                                        <td>Interpret MAE, R², accuracy and per-class measures together.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Team communication</td>
+                                        <td>Group D coordination and report review</td>
+                                        <td>Keep clear action notes and communicate findings sooner.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ethical awareness</td>
+                                        <td>Two collaborative discussions</td>
+                                        <td>Check data privacy, bias, explanation and oversight.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Technical confidence</td>
+                                        <td>Python notebooks and presentation work</td>
+                                        <td>Reproduce results independently and retain run evidence.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+                    <hr />
+                    <section id="final-reflection">
+                        <header class="major">
+                            <h2>14. Final Reflective Piece</h2>
+                        </header>
+                        <div class="portfolio-note"><strong>Draft for review:</strong> This reflective piece is
+                            presented for your personal verification against the final assessment instructions and
+                            supporting evidence before submission.</div>
+                        <p><strong>Reflective framework:</strong> What? So What? Now What? (Rolfe, Freshwater and
+                            Jasper, 2001).</p>
+                        <h3>What?</h3>
+                        <p>I entered the Machine Learning module with practical experience of computer networks and
+                            automation but less confidence in statistical and machine learning concepts. Over the module
+                            I studied how data is represented, how relationships are explored and how different models
+                            are selected and evaluated. The Jaccard activity provided a manageable introduction to
+                            distance measures: by changing the medical-test results into binary attributes, I could see
+                            why the choice of representation affects a calculation.</p>
+                        <p>The two assessed projects challenged me in different ways. In Group D's Airbnb analysis, my
+                            individual focus was EDA. I helped make the dataset more understandable and examined how
+                            summary values and charts supported the team's report. In my Fashion-MNIST presentation I
+                            moved to image classification and compared logistic regression with a CNN. The collaborative
+                            discussions added a wider perspective on the social effects of automation and the
+                            responsible use of AI-generated outputs.</p>
+                        <h3>So What?</h3>
+                        <p>The greatest change in my understanding was recognising that machine learning is not simply a
+                            matter of running an algorithm and reporting the final score. Before modelling, data
+                            quality, relevance and interpretation matter. The Airbnb data made this particularly clear:
+                            the average price was noticeably higher than the median, and the final price-prediction
+                            model explained only a limited proportion of variation. This made me cautious about
+                            presenting a prediction as though it were an exact valuation.</p>
+                        <p>I also learned that a higher accuracy score can conceal differences across categories. In
+                            Fashion-MNIST, the CNN improved overall accuracy over logistic regression, but shirts
+                            remained much harder to identify than sneakers. That observation made model evaluation more
+                            concrete for me. I began asking which cases the model handles poorly and whether those
+                            mistakes would matter in the intended application.</p>
+                        <p>Working in a virtual team reinforced the need to explain technical findings clearly. My EDA
+                            contribution was only one part of the final Airbnb report, but it required me to review
+                            charts, question interpretations and make sure that descriptions did not overstate what the
+                            data showed. I still need more practice reproducing notebook results independently and
+                            making technical decisions confidently within a deadline.</p>
+                        <p>The discussions also connected machine learning to professional responsibility. In a
+                            networking environment, automation can save time and improve monitoring, but an incorrect
+                            output or poorly governed system can have consequences. I now see human review, privacy and
+                            transparent limitations as part of technical quality, not separate topics added at the end.
+                        </p>
+                        <h3>Now What?</h3>
+                        <p>My next priority is to strengthen the fundamentals I found most difficult, particularly
+                            regression assumptions, optimisation, neural-network training and the interpretation of
+                            evaluation metrics. I want to practise with smaller datasets so I can explain each stage in
+                            my own words before using more complicated architectures.</p>
+                        <p>I also plan to carry these lessons into network engineering applications. For example, a
+                            model that flags unusual network behaviour should be assessed for missed incidents and false
+                            alerts, not only its aggregate accuracy. I would begin with reliable data collection,
+                            compare a simple baseline, document limitations and retain engineer oversight before
+                            recommending operational actions.</p>
+                        <p>Overall, this module increased my confidence in asking better questions about machine
+                            learning. I have not mastered every technique, but I am better able to recognise how the
+                            dataset, evaluation method, teamwork and ethical context shape whether a model is genuinely
+                            useful.</p>
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+                    <hr />
+                    <section id="mapping">
+                        <header class="major">
+                            <h2>15. Learning Outcome Mapping</h2>
+                        </header>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Evidence</th>
+                                        <th>LO1</th>
+                                        <th>LO2</th>
+                                        <th>LO3</th>
+                                        <th>LO4</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Discussion 1 — Industry 4.0</td>
+                                        <td>✓</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>✓</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Unit 3 — Correlation/Regression</td>
+                                        <td></td>
+                                        <td>✓</td>
+                                        <td>✓</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Unit 5 — Jaccard</td>
+                                        <td></td>
+                                        <td>✓</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Group D — Airbnb</td>
+                                        <td></td>
+                                        <td>✓</td>
+                                        <td>✓</td>
+                                        <td>✓</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Unit 7 — Perceptrons</td>
+                                        <td></td>
+                                        <td>✓</td>
+                                        <td>✓</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Discussion 2 — ANN ethics</td>
+                                        <td>✓</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>✓</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Unit 8 — Gradient Descent</td>
+                                        <td></td>
+                                        <td>✓</td>
+                                        <td>✓</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Unit 9 — CNN</td>
+                                        <td></td>
+                                        <td>✓</td>
+                                        <td>✓</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fashion-MNIST</td>
+                                        <td>✓</td>
+                                        <td>✓</td>
+                                        <td>✓</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Unit 11 — Model Performance Measurement</td>
+                                        <td>✓</td>
+                                        <td></td>
+                                        <td>✓</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Final reflection</td>
+                                        <td>✓</td>
+                                        <td>✓</td>
+                                        <td>✓</td>
+                                        <td>✓</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Learning outcome mapping links completed practical evidence to relevant module outcomes;
+                            final portfolio evidence and reflections should be checked before submission.</p>
+                        <p><a href="#top">Back to contents</a></p>
+                    </section>
+                    <hr />
+                    <section id="references">
+                        <header class="major">
+                            <h2>16. References</h2>
+                        </header>
+                        <p>Hutson, M. (2021) ‘Robo-writers: the rise and risks of language-generating AI’,
+                            <em>Nature</em>, 591, pp. 22–25. doi: 10.1038/d41586-021-00530-0.
+                        </p>
+                        <p>Metcalf, G.S. (2024) ‘An Introduction to Industry 5.0: History, Foundations, ...’ [Full
+                            bibliographic details to confirm against the Unit 1 reading list].</p>
+                        <p>Rolfe, G., Freshwater, D. and Jasper, M. (2001) <em>Critical reflection in nursing and the
+                                helping professions: A user’s guide.</em> Basingstoke: Palgrave Macmillan.</p>
+                        <p>University of Essex Online (2026) <em>Machine Learning: Unit 5 Jaccard Distance /
+                                Dissimilarity Calculations</em>. Module learning activity.</p>
+                        <p class="status-placeholder"><strong>Evidence to add:</strong> Complete Harvard references for
+                            the discussions, datasets and assessed projects using sources actually consulted.</p>
+                        <p><a href="#top">Back to contents</a></p>
+                        <li>Wall, M. (2019) ‘Biased and wrong? Facial recognition tech in the dock’, BBC News. <a
+                                href="https://www.bbc.com/news/business-48842750">Article link</a></li>
+                    </section>
+                </div>
+            </section>
+        </div>
+        <footer id="footer">
+            <div class="inner">
+                <ul class="copyright">
+                    <li>© Vinod Jadhav</li>
+                    <li>Design: HTML5 UP</li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>
