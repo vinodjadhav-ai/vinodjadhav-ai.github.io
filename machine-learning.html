@@ -684,16 +684,118 @@
                         <header class="major">
                             <h2>11. Unit 9: Convolutional Neural Networks</h2>
                         </header>
-                        <span class="section-label">Learning Visual Features</span>
-                        <p>Convolutional neural networks apply trainable filters to local regions of an image, helping a
-                            model learn visual features. This is relevant to the later Fashion-MNIST assessment, which
-                            explored the difference between a simpler baseline classifier and a CNN.</p>
-                        <p>The separate Unit 9 exercise should provide evidence of what I did in the notebook, rather
-                            than merely repeating the individual assignment. The results and screenshots will be added
-                            after reviewing the activity.</p>
-                        <p><strong>Learning outcomes addressed:</strong> LO2 and LO3 (once evidenced).</p>
-                        <p class="status-placeholder"><strong>Evidence to add:</strong> Add Unit 9 activity results,
-                            screenshots and an individual learning reflection.</p>
+                        <span class="section-label">CIFAR-10 Object Recognition — Prediction Results and Responsible
+                            AI</span>
+                        <p>For this activity, I ran the supplied convolutional neural network (CNN) notebook using the
+                            CIFAR-10 image dataset. I examined the image-preparation, convolution, pooling, training and
+                            evaluation sections, then changed the image selected for prediction from
+                            <code>x_test[16]</code> to <code>x_test[5]</code> and <code>x_test[12]</code>. I used the
+                            same trained model for all three predictions.</p>
+                        <p>The CNN achieved <strong>62.42% test accuracy</strong> in the notebook's evaluation. The
+                            training-loss plot shows training loss continuing to decrease while validation loss begins
+                            to increase after its lowest point, suggesting possible overfitting. The three individual
+                            predictions were correct, but this does not mean the model performs perfectly across the
+                            test dataset.</p>
+                        <h3>Original and Modified Prediction Results</h3>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Test image</th>
+                                        <th>Actual label</th>
+                                        <th>CNN prediction</th>
+                                        <th>Result</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>x_test[16]</code> (original)</td>
+                                        <td>5 — Dog</td>
+                                        <td>5 — Dog</td>
+                                        <td>Correct</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>x_test[5]</code> (modified)</td>
+                                        <td>6 — Frog</td>
+                                        <td>6 — Frog</td>
+                                        <td>Correct</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>x_test[12]</code> (modified)</td>
+                                        <td>5 — Dog</td>
+                                        <td>5 — Dog</td>
+                                        <td>Correct</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>All three chosen images were classified correctly. However, CIFAR-10 images are only 32 × 32
+                            pixels, and details are not always clear. This exercise helped me understand why dataset
+                            limitations, overall test metrics and class-specific errors matter beyond a few successful
+                            predictions.</p>
+                        <p>In connection with <strong>Wall (2019)</strong>, I also considered the ethical consequences
+                            of errors in computer vision. Misclassifying a classroom image is different from incorrectly
+                            identifying a person using facial recognition. Dataset bias, privacy, human oversight and
+                            accountability are therefore important alongside model accuracy.</p>
+                        <p><strong>Learning outcomes addressed:</strong> understanding dataset applicability and
+                            limitations; articulating social, ethical, legal and professional concerns arising from
+                            machine-learning applications.</p>
+                        <h3>Supporting Evidence</h3>
+                        <div class="evidence-grid">
+                            <div class="evidence-card">
+                                <h4>Completed Activity</h4>
+                                <p>Actual training observations, 62.42% test accuracy and comparison of three image
+                                    predictions.</p><a
+                                    href="evidence/machine-learning/unit-activities/unit-9-cnn/completed-activity.md">View
+                                    completed activity</a>
+                            </div>
+                            <div class="evidence-card">
+                                <h4>Activity Reflection</h4>
+                                <p>What? So What? Now What? — CNN predictions, limitations and facial-recognition ethics
+                                    from Wall (2019).</p><a
+                                    href="evidence/machine-learning/unit-activities/unit-9-cnn/reflection.md">View
+                                    learning reflection</a>
+                            </div>
+                            <div class="evidence-card">
+                                <h4>Executed Notebook</h4>
+                                <p>Python code and experiment outputs for CIFAR-10 CNN training and classification.</p>
+                                <a
+                                    href="evidence/machine-learning/unit-activities/unit-9-cnn/Unit09%20Ex1%20Convolutional%20Neural%20Networks%20%28CNN%29%20-%20Object%20Recognition%20%281%29.ipynb">Open
+                                    Jupyter notebook</a>
+                            </div>
+                        </div>
+                        <h3>Selected Activity Screenshots</h3>
+                        <div class="screenshot-gallery">
+                            <figure><a
+                                    href="evidence/machine-learning/unit-activities/unit-9-cnn/screenshots/ex1-cnn-training-loss.png"
+                                    rel="noopener" target="_blank"><img
+                                        alt="CNN training loss and validation loss over six epochs" loading="lazy"
+                                        src="evidence/machine-learning/unit-activities/unit-9-cnn/screenshots/ex1-cnn-training-loss.png" /></a>
+                                <figcaption>Training loss vs validation loss — validation loss rises in later epochs.
+                                </figcaption>
+                            </figure>
+                            <figure><a
+                                    href="evidence/machine-learning/unit-activities/unit-9-cnn/screenshots/ex1-cnn-original-16.png"
+                                    rel="noopener" target="_blank"><img alt="Image 16 actual dog predicted dog"
+                                        loading="lazy"
+                                        src="evidence/machine-learning/unit-activities/unit-9-cnn/screenshots/ex1-cnn-original-16.png" /></a>
+                                <figcaption>Original image 16 — dog, correctly predicted.</figcaption>
+                            </figure>
+                            <figure><a
+                                    href="evidence/machine-learning/unit-activities/unit-9-cnn/screenshots/ex1-cnn-modified-5.png"
+                                    rel="noopener" target="_blank"><img alt="Image 5 actual frog predicted frog"
+                                        loading="lazy"
+                                        src="evidence/machine-learning/unit-activities/unit-9-cnn/screenshots/ex1-cnn-modified-5.png" /></a>
+                                <figcaption>Modified image 5 — frog, correctly predicted.</figcaption>
+                            </figure>
+                            <figure><a
+                                    href="evidence/machine-learning/unit-activities/unit-9-cnn/screenshots/ex1-cnn-modified-12.png"
+                                    rel="noopener" target="_blank"><img alt="Image 12 actual dog predicted dog"
+                                        loading="lazy"
+                                        src="evidence/machine-learning/unit-activities/unit-9-cnn/screenshots/ex1-cnn-modified-12.png" /></a>
+                                <figcaption>Modified image 12 — dog, correctly predicted.</figcaption>
+                            </figure>
+                        </div>
                         <p><a href="#top">Back to contents</a></p>
                     </section>
                     <hr />
@@ -983,14 +1085,14 @@
                                         <td>✓</td>
                                     </tr>
                                     <tr>
-                                        <td>Unit 8 — Gradient Descent (pending)</td>
+                                        <td>Unit 8 — Gradient Descent</td>
                                         <td></td>
                                         <td>✓</td>
                                         <td>✓</td>
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td>Unit 9 — CNN (pending)</td>
+                                        <td>Unit 9 — CNN</td>
                                         <td></td>
                                         <td>✓</td>
                                         <td>✓</td>
@@ -1020,8 +1122,8 @@
                                 </tbody>
                             </table>
                         </div>
-                        <p>Rows marked “pending” identify intended evidence mapping, not evidence already completed and
-                            verified. Unit 3 and Unit 7 now have linked activity evidence.</p>
+                        <p>Learning outcome mapping links completed practical evidence to relevant module outcomes;
+                            final portfolio evidence and reflections should be checked before submission.</p>
                         <p><a href="#top">Back to contents</a></p>
                     </section>
                     <hr />
@@ -1030,8 +1132,7 @@
                             <h2>16. References</h2>
                         </header>
                         <p>Hutson, M. (2021) ‘Robo-writers: the rise and risks of language-generating AI’,
-                            <em>Nature</em>, 591, pp. 22–25. doi: 10.1038/d41586-021-00530-0.
-                        </p>
+                            <em>Nature</em>, 591, pp. 22–25. doi: 10.1038/d41586-021-00530-0.</p>
                         <p>Metcalf, G.S. (2024) ‘An Introduction to Industry 5.0: History, Foundations, ...’ [Full
                             bibliographic details to confirm against the Unit 1 reading list].</p>
                         <p>Rolfe, G., Freshwater, D. and Jasper, M. (2001) <em>Critical reflection in nursing and the
@@ -1041,6 +1142,8 @@
                         <p class="status-placeholder"><strong>Evidence to add:</strong> Complete Harvard references for
                             the discussions, datasets and assessed projects using sources actually consulted.</p>
                         <p><a href="#top">Back to contents</a></p>
+                        <li>Wall, M. (2019) ‘Biased and wrong? Facial recognition tech in the dock’, BBC News. <a
+                                href="https://www.bbc.com/news/business-48842750">Article link</a></li>
                     </section>
                 </div>
             </section>
