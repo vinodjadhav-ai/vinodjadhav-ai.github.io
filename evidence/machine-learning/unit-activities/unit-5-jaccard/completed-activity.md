@@ -2,7 +2,6 @@
 
 **Module:** Machine Learning  
 **Activity:** Clustering — Jaccard Distance  
-**University:** University of Essex Online
 
 ## 1. Activity Objective
 
@@ -99,7 +98,4 @@ All three calculated values match the expected results provided in the universit
 Jack and Mary have the lowest Jaccard Distance (0.33), which indicates that they are the most similar pair when considering the positive attributes.
 
 Jim and Mary have the highest Jaccard Distance (0.75), making them the most dissimilar pair.
-
-The exercise demonstrates that shared positive features contribute to similarity, while differences increase the Jaccard Distance. Shared zero values are excluded because the calculation focuses on the presence of asymmetric binary attributes.
-
 
